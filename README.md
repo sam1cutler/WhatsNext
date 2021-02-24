@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# What's Next?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Use the Vercel-hosted app [here](TBD).
 
-## Available Scripts
+## General Description
+*Streamline your streaming.* Do you ever get a recommendation from a friend about a new show to watch, but then can't recall the recommendation a month later? Do you vaguely remember watching a really good British crime show like 3 years ago, but can't remember the show's title or streaming service? Do you want to quickly find a fun comedy, available on Netflix, that a friend watched and enjoyed sometime in the last month? If you answered "yes" to any of these questions, then <b>What's Next?</b> is for you!
 
-In the project directory, you can run:
+## Summary
+Whenever a friend mentions a show they just loved... or you read a review of a new show online... or you scroll past a show that looks cool on your way to finding the show you meant to watch - don't forget about that new show!
 
-### `npm start`
+Open up <b>What's Next?</b>, and add the new show to your Watch List. 
+![TBD](./src/images/TBD "TBD")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If you want, add the streaming service the show is available on, the genre, and where the show "ranks" in your priority queue - is it the next thing on your list? Or something to turn on in a few months once you've finished everything else?
+![TBD](./src/images/TBD "TBD")
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once you've finished a show, move it <i>out</i> of your Watch List and <i>into</i> your Watched Log. And when you do, you have the option to add a rating.
+![TBD](./src/images/TBD "TBD")
+Now, when a friend asks you about that kinda weird but very cool SciFi show you watched on HBO Max a couple years ago, you know just where to look to find it!
 
-### `npm test`
+Create a network of friends who use the app, and easily view their profiles.
+![TBD](./src/images/TBD "TBD")
+You can also generate an easily-shareable link so that anyone - even people without accounts - can view your profile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology used
+This React project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), with elements of Javascript, JSX, HTML, and CSS, and testing with Jest.
 
-### `npm run build`
+## Contact me
+You can find [my GitHub page here](https://github.com/sam1cutler).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+This project is a fullstack capstone project for the Thinkful software engineering program. 
