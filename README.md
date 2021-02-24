@@ -1,6 +1,6 @@
 # What's Next?
 
-Use the Vercel-hosted app [here](TBD).
+Use the Vercel-hosted app [here, when it exists](TBD).
 
 ## General Description
 *Streamline your streaming.* Do you ever get a recommendation from a friend about a new show to watch, but then can't recall the recommendation a month later? Do you vaguely remember watching a really good British crime show like 3 years ago, but can't remember the show's title or streaming service? Do you want to quickly find a fun comedy, available on Netflix, that a friend watched and enjoyed sometime in the last month? If you answered "yes" to any of these questions, then <b>What's Next?</b> is for you!

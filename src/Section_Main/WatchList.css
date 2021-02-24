@@ -1,0 +1,31 @@
+.show-list-container {
+    margin: 1vh;
+    padding: 2%;
+    border: solid 1px black;
+    width: 100%;
+    height: 78vh;
+}
+
+section {
+    margin: 1%;
+    padding: 2%;
+    border: solid 1px black;
+}
+  
+.show-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 2%; 
+    padding: 2%;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+  
+.add-button {
+    margin: 3% 20%;
+    padding: 3%;
+    border: solid 1px black;
+    border-radius: 3px;
+}
+  

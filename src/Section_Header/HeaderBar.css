@@ -1,0 +1,13 @@
+header {
+    margin: 1vh;
+    padding: 2%;
+    width: 100%;
+    border: 1px solid black;
+    height: 8vh;
+}
+
+h1 {
+    font-size: 18pt;
+    margin: 3%;
+}
+  
