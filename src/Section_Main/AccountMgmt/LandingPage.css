@@ -22,11 +22,18 @@ hr {
     margin: 0 15%;
 }
 
+.next-steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .next-step {
-    margin: 4%;
+    margin: 2% 4%;
     padding: 3%;
     border: 2%;
     text-align: center;
     border: 1px solid black;
     border-radius: 4px;
+    box-shadow: 0 0 7px grey;
 }

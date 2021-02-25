@@ -1,18 +1,28 @@
+import { NavLink } from 'react-router-dom';
 import './NavBar.css';
 
 function NavBar() {
 
     return (
         <nav>
-            <div className='nav-button'>
+            <NavLink
+                to='/watched-log'
+                className='nav-button'
+            >
                 WATCHED
-            </div>
-            <div className='nav-button'>
+            </NavLink>
+            <NavLink
+                to='/watch-list'
+                className='nav-button'
+            >
                 TO-WATCH
-            </div>
-            <div className='nav-button'>
+            </NavLink>
+            <NavLink
+                to='/friends'
+                className='nav-button'
+            >
                 FRIENDS
-            </div>
+            </NavLink>
         </nav>
     )
 

@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
@@ -42,11 +43,22 @@ function LandingPage() {
 
             <section>
                 <h2>Learn More</h2>
-                <div className='next-step'>
-                    Test out a demo to see how the app functions as an established user.
-                </div>
-                <div className='next-step'>
-                    Sign up for an account and get started.
+                <div className='next-steps-container'>
+                    <NavLink
+                        to='/watch-list'
+                        className='next-step'
+                    >
+                        
+                            Test out a demo to see how the app functions as an established user.
+                        
+                    </NavLink>
+
+                    <NavLink
+                        to='/signup'
+                        className='next-step'
+                    >
+                        Sign up for an account and get started.
+                    </NavLink>
                 </div>
             </section>
 

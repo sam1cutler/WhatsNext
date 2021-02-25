@@ -18,3 +18,7 @@ nav {
     width: 31%;
     border: 1px solid black;
 }
+
+nav .active {
+    box-shadow: 0 0 7px grey;
+}

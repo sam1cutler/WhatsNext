@@ -13,6 +13,11 @@ header {
     background-color: white;
 }
 
+header .active {
+    text-shadow: 0 0 7px rgb(78, 78, 78);
+    box-shadow: none;
+  }
+
 .header-component {
     width: 100%;
 }
