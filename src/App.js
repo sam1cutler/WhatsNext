@@ -1,8 +1,9 @@
 import './App.css';
 import { Route } from 'react-router-dom';
 import NavBar from './Section_Footer/NavBar';
+import LandingPage from './Section_Main/AccountMgmt/LandingPage';
 import HeaderBar from './Section_Header/HeaderBar';
-import WatchList from './Section_Main/WatchList';
+import WatchList from './Section_Main/CoreContent/WatchList';
 
 
 function renderHeader() {
@@ -19,10 +20,18 @@ function renderHeader() {
 function renderMain() {
 
   return (
-    <Route 
-      path='/'
-      component={WatchList}
-    />
+    <>
+      <Route 
+        path='/'
+        exact
+        component={LandingPage}
+      />
+      <Route 
+        path='/watch-list'
+        exact
+        component={WatchList}
+      />
+    </>
   )
   
 
@@ -31,10 +40,16 @@ function renderMain() {
 function renderFooter() {
 
   return (
-    <Route 
-      path='/'
-      component={NavBar}
-    />
+    <>
+      {['/watch-list','watched-log','/friends'].map(path => (
+        <Route 
+          exact
+          key={path}
+          path={path}
+          component={NavBar}
+        />
+      ))}
+    </>
   )
 
 }
