@@ -1,0 +1,9 @@
+.show-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 2%; 
+    padding: 2%;
+    border: solid 1px black;
+    border-radius: 3px;
+}

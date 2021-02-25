@@ -1,17 +1,10 @@
-.show-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5% 2%; 
-    padding: 2%;
-    border: solid 1px black;
-    border-radius: 3px;
-}
-  
 .add-button {
-    margin: 3% 20%;
+    margin: 2% 25%;
     padding: 3%;
-    border: solid 1px black;
-    border-radius: 3px;
+    border: 2%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 7px grey;
 }
   

@@ -25,12 +25,12 @@ function HeaderBar() {
                     Login
                 </NavLink>
 
-                <NavLink 
+                <Link 
                     to='/watch-list'
                     className='header-link-container'
                 >
                     Demo
-                </NavLink>
+                </Link>
             </div>
         </header>
     )
