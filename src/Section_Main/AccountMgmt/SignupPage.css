@@ -1,18 +1,11 @@
 .signup-container {
-    margin: 1vh 1vw;
     padding: 25% 2%;
-    border: 1px solid black;
-    height: 88vh;
     width: 98vw;
-    position: fixed;
-    top: 10vh;
-    overflow: auto;
 }
 
 .signup-form {
     margin: 2%;
     padding: 2%;
-    max-width: 650px;
     text-align: center;
 }
 

@@ -1,14 +1,3 @@
-.show-list-container {
-    margin: 1vh 1vw;
-    padding: 2%;
-    border: solid 1px black;
-    width: 98vw;
-    height: 78vh;
-    position: fixed;
-    top: 10vh;
-    overflow: auto;
-}
-  
 .show-card {
     display: flex;
     flex-direction: row;

@@ -1,21 +1,3 @@
-.landing-container {
-    margin: 1vh 1vw;
-    padding: 2%;
-    border: 1px solid black;
-    height: 88vh;
-    position: fixed;
-    top: 10vh;
-    overflow: auto;
-}
-
-h2 {
-    font-size: 15pt;
-}
-
-p {
-    font-size: 12pt;
-}
-
 hr {
     border: 0;
     border-top: 1px solid grey;

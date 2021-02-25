@@ -17,22 +17,6 @@ body {
   align-items: center;
 }
 
-/*
-.main-section {
-  margin: 1%;
-  padding: 2%;
-  border: 1px solid black;
-}
-
-h2 {
-  font-size: 15pt;
-}
-
-p {
-  font-size: 12pt;
-}
-*/
-
 a:link {
   text-decoration: none;
   color: black;
