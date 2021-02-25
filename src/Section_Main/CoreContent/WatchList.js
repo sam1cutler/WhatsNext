@@ -1,7 +1,26 @@
+import ToWatchCard from './ShowCards/ToWatchCard';
 import './WatchList.css';
+
+import STORE from './store';
+
+
+function renderShowList(showList) {
+
+    return showList.map( (activeShow, i) => {
+        return (
+            <ToWatchCard 
+                key={i}
+                cardInfo={activeShow}
+            />
+        )
+    })
+
+}
 
 
 function WatchList() {
+
+    const listOfShows = renderShowList(STORE.shows);
 
     return (
         <main className='show-list-container'>
@@ -57,6 +76,8 @@ function WatchList() {
             <div className='add-button'>
             Add show
             </div>
+
+            {listOfShows}
 
         </main>
     )

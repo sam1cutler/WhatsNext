@@ -5,6 +5,9 @@ import LandingPage from './Section_Main/AccountMgmt/LandingPage';
 import HeaderBar from './Section_Header/HeaderBar';
 import WatchList from './Section_Main/CoreContent/WatchList';
 import SignupPage from './Section_Main/AccountMgmt/SignupPage';
+import LoginPage from './Section_Main/AccountMgmt/LoginPage';
+import WatchedLog from './Section_Main/CoreContent/WatchedLog';
+import FriendsPage from './Section_Main/CoreContent/FriendsPage';
 
 
 function renderHeader() {
@@ -28,15 +31,32 @@ function renderMain() {
         component={LandingPage}
       />
       <Route 
+        path='/signup'
+        exact
+        component={SignupPage}
+      />
+      <Route 
+        path='/login'
+        exact
+        component={LoginPage}
+      />
+      <Route 
         path='/watch-list'
         exact
         component={WatchList}
       />
       <Route 
-        path='/signup'
+        path='/watched-log'
         exact
-        component={SignupPage}
+        component={WatchedLog}
       />
+      <Route 
+        path='/friends'
+        exact
+        component={FriendsPage}
+      />
+      
+      
     </>
   )
   
