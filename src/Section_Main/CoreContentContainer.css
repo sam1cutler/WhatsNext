@@ -8,8 +8,9 @@
     width: 98vw;
     height: 78vh;
     position: fixed;
-    top: 10vh;
-    overflow: auto;
+    top: 20vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .show-list-container {

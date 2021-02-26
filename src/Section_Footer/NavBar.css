@@ -6,7 +6,7 @@ nav {
     margin: 1vh 1vw;
     padding: 2%;
     position: fixed;
-    bottom: 0;
+    top: 10vh;
     width: 98vw;
     height: 8vh;
     border: 1px solid black;

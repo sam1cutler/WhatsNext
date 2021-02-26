@@ -9,7 +9,8 @@
     width: 98vw;
     position: fixed;
     top: 10vh;
-    overflow: auto;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .acct-mgmt-container h2 {
