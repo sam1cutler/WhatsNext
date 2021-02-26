@@ -3,11 +3,10 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
-    margin: 1%;
-    padding: 2%;
-    width: 98%;
+    padding: 3%;
+    width: 100%;
     border: 1px solid black;
-    height: 8%;
+    height: 10vh;
     position: fixed;
     top: 0;
     background-color: white;

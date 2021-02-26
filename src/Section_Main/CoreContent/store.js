@@ -81,6 +81,15 @@ const STORE = {
             completed: '2020-07-01T00:00:00.000Z',
             rating: 2
         },
+        {
+            title: "Schitt's Creek",
+            service: "Netflix",
+            genre: "Comedy",
+            watched: true,
+            priority: null,
+            completed: '2021-02-28T00:00:00.000Z',
+            rating: 5
+        },
     ],
     friends: [
         {
