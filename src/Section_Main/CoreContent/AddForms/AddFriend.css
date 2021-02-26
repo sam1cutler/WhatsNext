@@ -1,0 +1,27 @@
+.add-friend-container {
+    padding: 15% 2%;
+    width: 98vw;
+}
+
+.add-friend-form {
+    margin: 2%;
+    padding: 2%;
+    text-align: center;
+}
+
+.add-friend-section {
+    margin: 1%;
+    padding: 2%;
+}
+
+.add-friend-button {
+    margin: 2% 25%;
+    padding: 3%;
+    border: 2%;
+    text-align: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 0 7px grey;
+}
+  

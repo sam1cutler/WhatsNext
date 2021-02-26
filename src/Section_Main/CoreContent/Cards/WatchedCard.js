@@ -1,8 +1,12 @@
+import { format } from 'date-fns';
 import './WatchedCard.css';
 
 function WatchedCard(props) {
 
     const { title, service, genre, completed, rating } = props.cardInfo;
+
+    const interimDate = new Date(completed);
+    const finalDate = format(interimDate, 'MMM yyyy');
 
     return (
         <div className='watched-show-card'>
@@ -20,7 +24,7 @@ function WatchedCard(props) {
 
             <div className='watched-card-half'>
                 <div>
-                    {completed}
+                    {finalDate}
                 </div>
                 <div>
                     {rating}⭐️

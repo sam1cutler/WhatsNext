@@ -33,7 +33,7 @@ function WatchList() {
             {listOfShows}
 
             <NavLink 
-                to='/add-show'    
+                to='/watch-list/add-show'    
             >
                 <div className='add-button'>
                 Add show

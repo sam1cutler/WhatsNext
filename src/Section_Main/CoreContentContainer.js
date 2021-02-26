@@ -4,6 +4,9 @@ import './CoreContentContainer.css';
 import WatchList from './CoreContent/WatchList';
 import WatchedLog from './CoreContent/WatchedLog';
 import FriendsPage from './CoreContent/FriendsPage';
+import AddShowWatched from './CoreContent/AddForms/AddShowWatched';
+import AddShowToWatch from './CoreContent/AddForms/AddShowToWatch';
+import AddFriend from './CoreContent/AddForms/AddFriend';
 
 
 function CoreContentContainer() {
@@ -26,6 +29,21 @@ function CoreContentContainer() {
                 path='/friends'
                 exact
                 component={FriendsPage}
+              />
+              <Route 
+                path='/watch-list/add-show'
+                exact
+                component={AddShowToWatch}
+              />
+              <Route 
+                path='/watched-log/add-show'
+                exact
+                component={AddShowWatched}
+              />
+              <Route 
+                path='/friends/add-friend'
+                exact
+                component={AddFriend}
               />
             </>
           )

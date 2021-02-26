@@ -28,7 +28,7 @@ function FriendsPage() {
             {listOfFriends}
 
             <NavLink 
-                to='/add-friend'    
+                to='/friends/add-friend'    
             >
                 <div className='add-button'>
                     Add friend

@@ -63,6 +63,24 @@ const STORE = {
             completed: null,
             rating: null
         },
+        {
+            title: "Mindhunter",
+            service: "Netflix",
+            genre: "Crime",
+            watched: true,
+            priority: null,
+            completed: '2020-09-01T00:00:00.000Z',
+            rating: 3
+        },
+        {
+            title: "Altered Carbon",
+            service: "Netflix",
+            genre: "SciFi",
+            watched: true,
+            priority: null,
+            completed: '2020-07-01T00:00:00.000Z',
+            rating: 2
+        },
     ],
     friends: [
         {

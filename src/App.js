@@ -28,7 +28,11 @@ function renderMain() {
           component={AccountMgmtContainer}
         />
       ))}
-      {['/watch-list','/watched-log','/friends'].map(path => (
+      {[
+          '/watch-list', '/watch-list/add-show',
+          '/watched-log','/watched-log/add-show', 
+          '/friends', '/friends/add-friend',
+        ].map(path => (
         <Route 
           exact
           key={path}
@@ -43,7 +47,11 @@ function renderMain() {
 function renderFooter() {
   return (
     <>
-      {['/watch-list','/watched-log','/friends'].map(path => (
+      {[
+          '/watch-list', '/watch-list/add-show',
+          '/watched-log','/watched-log/add-show', 
+          '/friends', '/friends/add-friend',
+        ].map(path => (
         <Route 
           exact
           key={path}

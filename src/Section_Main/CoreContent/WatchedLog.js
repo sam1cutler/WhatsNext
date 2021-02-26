@@ -32,7 +32,7 @@ function WatchedLog() {
             {listOfShows}
 
             <NavLink 
-                to='/add-show'    
+                to='/watched-log/add-show'    
             >
                 <div className='add-button'>
                     Add show
