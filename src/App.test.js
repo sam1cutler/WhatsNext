@@ -1,8 +1,21 @@
-import { render, screen } from '@testing-library/react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it(`renders without crashing`, () => {
+  
+  // Creating a DOM element into which we'll render the component to be tested
+  const div = document.createElement('div');
+  
+  // render the component
+  ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>, div
+  );
+  
+  // clean things up
+  ReactDOM.unmountComponentAtNode(div);
+
 });
