@@ -9,7 +9,6 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: -webkit-fill-available;
   height: 100vh;
   width: 100%;
   background-color: rgb(203, 216, 216);
@@ -18,4 +17,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+html {
+  height: -webkit-fill-available;
 }
