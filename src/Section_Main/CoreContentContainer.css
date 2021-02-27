@@ -4,8 +4,9 @@
     align-items: center;
     margin: 21vh 0 10% 0;
     padding: 3%;
-    border: 1px solid black;
-    width: 98%;
+    width: 100%;
+    background-color: rgb(214, 214, 253);
+    
 }
 
 .show-list-container {

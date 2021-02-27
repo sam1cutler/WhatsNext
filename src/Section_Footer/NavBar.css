@@ -5,11 +5,10 @@ nav {
     align-items: center;
     padding: 3%;
     width: 100%;
-    border: 1px solid black;
     height: 10vh;
     position: fixed;
     top: 9vh;
-    background-color: white;
+    background-color: rgb(221, 236, 223);
 }
 
 .nav-button {

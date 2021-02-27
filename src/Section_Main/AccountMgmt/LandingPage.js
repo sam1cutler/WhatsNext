@@ -48,9 +48,7 @@ function LandingPage() {
                         to='/watch-list'
                         className='next-step'
                     >
-                        
-                            Test out a demo to see how the app functions as an established user.
-                        
+                            Test out a demo to see how the app functions as an established user.   
                     </NavLink>
 
                     <NavLink

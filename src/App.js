@@ -44,7 +44,7 @@ function renderMain() {
   )
 }
 
-function renderFooter() {
+function renderNav() {
   return (
     <>
       {[
@@ -70,8 +70,8 @@ function App() {
   return (
     <div className="app-container">
       {renderHeader()}
+      {renderNav()}
       {renderMain()}
-      {renderFooter()}
     </div>
   );
 }

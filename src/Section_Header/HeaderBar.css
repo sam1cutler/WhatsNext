@@ -5,11 +5,7 @@ header {
     align-items: flex-end;
     padding: 3%;
     width: 100%;
-    border: 1px solid black;
-    height: 10vh;
-    position: fixed;
-    top: 0;
-    background-color: white;
+    background-color: rgb(204, 204, 204);
 }
 
 header .active {
