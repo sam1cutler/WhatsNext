@@ -1,6 +1,7 @@
 import { Route } from 'react-router-dom';
 import './CoreContentContainer.css';
 
+import NavBar from '../Section_Footer/NavBar';
 import WatchList from './CoreContent/WatchList';
 import WatchedLog from './CoreContent/WatchedLog';
 import FriendsPage from './CoreContent/FriendsPage';
@@ -51,9 +52,12 @@ function CoreContentContainer() {
     }
 
     return (
-        <main className='core-content-container'>
+      <main className='core-content-container'>
+          <NavBar />
+          <div className='actual-content-container'>
             {renderCoreContentScreens()}
-        </main>
+          </div>
+      </main>
     )
 
 }

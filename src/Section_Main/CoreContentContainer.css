@@ -1,14 +1,30 @@
 .core-content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 21vh 0 10% 0;
-    padding: 3%;
+    display: grid;
+    grid-template-rows: 10% 1fr;
+    margin: 0;
+    padding: 0;
     width: 100%;
     background-color: rgb(214, 214, 253);
+    overflow-y: scroll;
     
+}
+
+.actual-content-container {
+    overflow-y: scroll;
+    padding: 0 0 10% 0;
 }
 
 .show-list-container {
     width: 100%;
 }
+
+.show-card-button {
+    margin: 1%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 7px grey;
+    background-color: rgb(195, 219, 219);
+}
+  

@@ -5,6 +5,8 @@
     padding: 2%;
     border: solid 1px black;
     border-radius: 3px;
+    background-color: rgb(223, 225, 240);
+    box-shadow: 0 0 6px grey;
 }
 
 .watched-card-half {

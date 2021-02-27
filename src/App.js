@@ -1,7 +1,7 @@
 import './App.css';
 import { Route } from 'react-router-dom';
 
-import NavBar from './Section_Footer/NavBar';
+//import NavBar from './Section_Footer/NavBar';
 import HeaderBar from './Section_Header/HeaderBar';
 import AccountMgmtContainer from './Section_Main/AccountMgmtContainer';
 import CoreContentContainer from './Section_Main/CoreContentContainer';
@@ -44,6 +44,7 @@ function renderMain() {
   )
 }
 
+/*
 function renderNav() {
   return (
     <>
@@ -62,6 +63,7 @@ function renderNav() {
     </>
   )
 }
+*/
 
 
 
@@ -70,7 +72,6 @@ function App() {
   return (
     <div className="app-container">
       {renderHeader()}
-      {renderNav()}
       {renderMain()}
     </div>
   );

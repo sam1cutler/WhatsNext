@@ -29,10 +29,10 @@ function WatchedCard(props) {
                 <div>
                     {rating}⭐️
                 </div>
-
+                <div className='show-card-button'>
+                    Edit
+                </div>
             </div>
-                
-
         </div>
     )
 
