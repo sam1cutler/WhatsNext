@@ -4,7 +4,7 @@ function LoginPage() {
 
     return (
 
-        <div className='login-container'>
+        <main className='login-container'>
             <h2>Log in</h2>
             <form className='login-form'>
                 <div className='login-form-section'>
@@ -19,7 +19,7 @@ function LoginPage() {
                     <button type='submit'>Sign up</button>
                 </div>
             </form>
-        </div>
+        </main>
 
     )
 

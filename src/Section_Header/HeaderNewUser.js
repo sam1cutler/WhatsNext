@@ -22,22 +22,22 @@ function HeaderNewUser() {
             </div>
             <div className='header-lower'>
                 <NavLink
-                    to='/watched-log'
+                    to='/signup'
                     className='nav-button'
                 >
-                    WATCHED
+                    Sign Up
+                </NavLink>
+                <NavLink
+                    to='/login'
+                    className='nav-button'
+                >
+                    Login
                 </NavLink>
                 <NavLink
                     to='/watch-list'
                     className='nav-button'
                 >
-                    TO-WATCH
-                </NavLink>
-                <NavLink
-                    to='/friends'
-                    className='nav-button'
-                >
-                    FRIENDS
+                    Demo
                 </NavLink>
             </div>
         </header>

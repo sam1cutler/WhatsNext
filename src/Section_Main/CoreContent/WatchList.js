@@ -28,7 +28,7 @@ function WatchList() {
     const listOfShows = renderShowList(STORE.shows);
 
     return (
-        <div className='show-list-container'>
+        <main className='show-list-container'>
 
             {listOfShows}
 
@@ -40,7 +40,7 @@ function WatchList() {
                 </div>
             </NavLink>
 
-        </div>
+        </main>
     )
 
 }

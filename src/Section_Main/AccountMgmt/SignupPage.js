@@ -4,7 +4,7 @@ function SignupPage() {
 
     return (
 
-        <div className='signup-container'>
+        <main className='signup-container'>
             <h2>Sign up for What's Next?</h2>
             <form className='signup-form'>
                 <div className='signup-form-section'>
@@ -27,7 +27,7 @@ function SignupPage() {
                     <button type='submit'>Sign up</button>
                 </div>
             </form>
-        </div>
+        </main>
 
     )
 

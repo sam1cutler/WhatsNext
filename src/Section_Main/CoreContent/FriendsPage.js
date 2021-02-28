@@ -23,7 +23,7 @@ function FriendsPage() {
 
     return(
 
-        <div className='friends-list-container'>
+        <main className='friends-list-container'>
             
             {listOfFriends}
 
@@ -35,7 +35,7 @@ function FriendsPage() {
                 </div>
             </NavLink>
 
-        </div>
+        </main>
 
     )
 

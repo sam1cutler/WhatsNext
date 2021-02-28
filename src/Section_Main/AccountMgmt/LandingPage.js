@@ -5,7 +5,7 @@ function LandingPage() {
 
     return (
 
-        <div>
+        <main>
 
             <section>
                 <h2><i>Streamline your streaming!</i></h2>
@@ -60,7 +60,7 @@ function LandingPage() {
                 </div>
             </section>
 
-        </div>
+        </main>
 
     )
 

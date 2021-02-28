@@ -4,7 +4,7 @@ function AddShowToWatch() {
 
     return(
 
-        <div className='add-show-container'>
+        <main className='add-show-container'>
             <h2>Add a show to your Watch List</h2>
             <form className='add-show-form'>
                 <div className='add-show-section'>
@@ -46,7 +46,7 @@ function AddShowToWatch() {
                     <button type='submit' className='add-show-button'>Add show</button>
                 </div>
             </form>
-        </div>
+        </main>
 
     )
 

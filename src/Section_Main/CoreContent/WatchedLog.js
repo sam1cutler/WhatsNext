@@ -27,7 +27,7 @@ function WatchedLog() {
 
     return (
 
-        <div className='show-list-container'>
+        <main className='show-list-container'>
 
             {listOfShows}
 
@@ -39,7 +39,7 @@ function WatchedLog() {
                 </div>
             </NavLink>
 
-        </div>
+        </main>
 
     )
 

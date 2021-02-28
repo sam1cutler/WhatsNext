@@ -4,7 +4,7 @@ function AddFriend() {
 
     return(
 
-        <div className='add-friend-container'>
+        <main className='add-friend-container'>
             <h2>Add a friend</h2>
             <p>Search by username or email:</p>
             <form className='add-friend-section'>
@@ -18,7 +18,7 @@ function AddFriend() {
             <div className='add-friend-section'>
                 <button type='submit' className='add-friend-button'>Add friend</button>
             </div>
-        </div>
+        </main>
 
     )
 
