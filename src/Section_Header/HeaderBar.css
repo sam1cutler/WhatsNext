@@ -5,6 +5,12 @@ header {
     align-items: flex-end;
     padding: 3%;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    overflow: auto;
     background-color: rgb(204, 204, 204);
 }
 

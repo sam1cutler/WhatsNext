@@ -1,17 +1,12 @@
 .core-content-container {
-    display: grid;
-    grid-template-rows: 10% 1fr;
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: rgb(214, 214, 253);
-    overflow-y: scroll;
-    
-}
-
-.actual-content-container {
-    overflow-y: scroll;
-    padding: 0 0 10% 0;
+    position: fixed;
+    top: 10%;
+    left: 0;
+    bottom: 0;
+    overflow: auto;   
 }
 
 .show-list-container {
