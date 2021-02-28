@@ -1,15 +1,12 @@
-/*--- main body styles ---*/
-
+/*--- main body styles / handling viewport ---*/
 * {
   box-sizing: border-box;
 }
 
 .app-container {
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   margin: 0;
   padding: 0;
   height: 100%;
@@ -17,6 +14,110 @@
   overflow: hidden;
 }
 
+header {
+  
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  overflow: auto;
+}
+
+main {
+  padding: 3%;
+  width: 100%;
+  position: fixed;
+  top: 15%;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgb(224, 224, 224)
+}
+
+.tinker-div1 {
+  margin: 3%;
+  padding: 3%;
+  border: 1px solid black;
+}
+
+
+/*--- overall header styles ---*/
+
+.header-upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  margin: 0;
+  padding: 1% 5%;
+  height: 40%;
+  background-color: rgb(160, 159, 159);
+}
+
+.header-upper .active {
+  text-shadow: 0 0 7px rgb(78, 78, 78);
+  box-shadow: none;
+}
+
+.header-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1% 3%;
+  height: 60%;
+  background-color: rgb(189, 187, 187);
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 2%;
+  height: 80%;
+  width: 31%;
+  border: 1px solid black;
+}
+
+.header-lower .active {
+  box-shadow: 0 0 7px grey;
+}
+
+.header-component {
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  text-align: left;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+header .links-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.header-link-container {
+  margin: 1% 3%;
+}
+
+
+
+
+/*--- link styles ---*/
 a:link {
   text-decoration: none;
   color: black;

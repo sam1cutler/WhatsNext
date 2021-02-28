@@ -1,3 +1,4 @@
+/*
 header {
     display: flex;
     flex-direction: row;
@@ -13,31 +14,7 @@ header {
     overflow: auto;
     background-color: rgb(204, 204, 204);
 }
+*/
 
-header .active {
-    text-shadow: 0 0 7px rgb(78, 78, 78);
-    box-shadow: none;
-  }
-
-.header-component {
-    width: 100%;
-}
-
-h1 {
-    font-size: 16pt;
-    margin: 0;
-    text-align: left;
-}
-
-.links-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-}
-
-.header-link-container {
-    margin: 1% 3%;
-}
 
   
