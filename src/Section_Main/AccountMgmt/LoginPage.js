@@ -16,7 +16,7 @@ function LoginPage() {
                     <input type="password" name='user-password' required />
                 </div>
                 <div className='login-form-section'>
-                    <button type='submit'>Sign up</button>
+                    <button type='submit' className='login-button'>Log in</button>
                 </div>
             </form>
         </main>

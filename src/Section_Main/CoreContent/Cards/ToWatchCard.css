@@ -16,3 +16,13 @@
     align-items: center;
     margin: 5px;
 }
+
+.show-card-button {
+    margin: 1%;
+    padding: 2%;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: rgb(206, 217, 218);
+}

@@ -24,7 +24,7 @@ function SignupPage() {
                     <input type="password" name='user-password2' required />
                 </div>
                 <div className='signup-form-section'>
-                    <button type='submit'>Sign up</button>
+                    <button type='submit' className='signup-button'>Sign up</button>
                 </div>
             </form>
         </main>

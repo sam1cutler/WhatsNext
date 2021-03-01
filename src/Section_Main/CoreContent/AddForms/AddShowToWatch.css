@@ -1,6 +1,7 @@
 .add-show-container {
-    padding: 15% 2%;
+    padding: 10% 2%;
     width: 98vw;
+    text-align: center;
 }
 
 .add-show-form {
@@ -15,13 +16,13 @@
 }
 
 .add-show-button {
-    margin: 2% 25%;
+    margin: 2% 4%;
     padding: 3%;
-    border: 2%;
+    font-size: 1.1rem;
     text-align: center;
     border: 1px solid black;
-    background-color: white;
     border-radius: 4px;
     box-shadow: 0 0 7px grey;
+    background-color: rgb(182, 195, 196);
 }
   

@@ -1,3 +1,8 @@
+.landing-page-container {
+    padding: 3% 8% 6% 8%;
+    text-align: center;
+}
+
 hr {
     border: 0;
     border-top: 1px solid grey;
@@ -13,9 +18,10 @@ hr {
 .next-step {
     margin: 2% 4%;
     padding: 3%;
-    border: 2%;
+    font-size: 1rem;
     text-align: center;
     border: 1px solid black;
     border-radius: 4px;
     box-shadow: 0 0 7px grey;
+    background-color: rgb(182, 195, 196);
 }

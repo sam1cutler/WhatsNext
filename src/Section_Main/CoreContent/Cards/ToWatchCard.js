@@ -13,7 +13,7 @@ function ToWatchCard(props) {
                     {service}
                 </div>
                 <div>
-                    {title}
+                    <b>{title}</b>
                 </div>
                 <div>
                     {genre}

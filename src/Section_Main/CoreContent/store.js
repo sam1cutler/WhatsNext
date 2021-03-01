@@ -55,7 +55,7 @@ const STORE = {
             rating: 5
         },
         {
-            title: "Star Trek: The Next Generation",
+            title: "Star Trek: TNG",
             service: "Netflix",
             genre: "SciFi",
             watched: false,

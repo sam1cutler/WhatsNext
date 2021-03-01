@@ -15,7 +15,7 @@ import AddShowToWatch from './Section_Main/CoreContent/AddForms/AddShowToWatch';
 import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
 
 
-/* -- Fxns to render main screen sections -- */
+/* -- Fxns to render header and main screen sections -- */
 function renderHeader() {
   return (
     <>
@@ -45,7 +45,6 @@ function renderHeader() {
 
 function renderMain() {
   return (
-    
     <>
       <Route 
         path='/'
@@ -93,77 +92,6 @@ function renderMain() {
         component={AddFriend}
       />
     </>
-
-    /*
-    <main>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-        <div className='tinker-div1'>
-          HERE IS THE MAIN SECTION
-        </div>
-      </main>
-    
-    
-    <>
-      {['/','/signup','/login'].map(path => (
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={AccountMgmtContainer}
-        />
-      ))}
-      {[
-          '/watch-list', '/watch-list/add-show',
-          '/watched-log','/watched-log/add-show', 
-          '/friends', '/friends/add-friend',
-        ].map(path => (
-        <Route 
-          exact
-          key={path}
-          path={path}
-          component={CoreContentContainer}
-        />
-      ))}
-    </>
-    */
   )
 }
 

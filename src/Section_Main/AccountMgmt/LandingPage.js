@@ -5,7 +5,7 @@ function LandingPage() {
 
     return (
 
-        <main>
+        <main className='landing-page-container'>
 
             <section>
                 <h2><i>Streamline your streaming!</i></h2>

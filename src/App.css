@@ -36,13 +36,6 @@ main {
   background-color: rgb(224, 224, 224)
 }
 
-.tinker-div1 {
-  margin: 3%;
-  padding: 3%;
-  border: 1px solid black;
-}
-
-
 /*--- overall header styles ---*/
 
 .header-upper {
@@ -83,6 +76,8 @@ main {
   height: 80%;
   width: 31%;
   border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgb(182, 195, 196);
 }
 
 .header-lower .active {

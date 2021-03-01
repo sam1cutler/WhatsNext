@@ -1,22 +1,30 @@
 .login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25% 2%;
-    
+    padding: 20% 2%;
+    width: 98vw;
+}
+
+.login-container h2 {
+    text-align: center;
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 2%;
     padding: 2%;
-    max-width: 650px;
     text-align: center;
 }
 
 .login-form-section {
     margin: 2%;
     padding: 2%;
+}
+
+.login-button {
+    margin: 2% 4%;
+    padding: 3%;
+    font-size: 1.1rem;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 0 7px grey;
+    background-color: rgb(182, 195, 196);
 }
