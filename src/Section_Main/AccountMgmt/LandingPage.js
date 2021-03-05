@@ -1,12 +1,30 @@
+import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
 
+    const [count, setCount] = useState(8);
+
+    useEffect( () => {
+        document.title = `Clicker at ${count} clicks.`
+    })
+    
+
     return (
 
         <main className='landing-page-container'>
 
+            
+            <div>
+                <p>You clicked {count} times!</p>
+                <button
+                    onClick={ () => setCount(count - 1)}
+                >
+                    Click me plz
+                </button>
+            </div>
+            
             <section>
                 <h2><i>Streamline your streaming!</i></h2>
                 <p>Do you ever get a recommendation from a friend about a new show to watch, but then can't recall the recommendation a month later? Do you vaguely remember watching a really good British crime show like 3 years ago, but can't remember the show's title or streaming service? Do you want to quickly find a fun comedy, available on Netflix, that a friend watched and enjoyed sometime in the last month? If you answered "yes" to any of these questions, then <b>What's Next?</b> is for you!</p>
