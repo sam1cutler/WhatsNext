@@ -1,9 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import './ToWatchCard.css';
 
 
 function ToWatchCard(props) {
 
-    const { title, service, genre, priority } = props.cardInfo;
+    const { id, title, service, genre, priority } = props.cardInfo;
 
     return (
 
@@ -24,12 +25,18 @@ function ToWatchCard(props) {
                 <div>
                     {priority}
                 </div>
+                
                 <div className='show-card-button'>
                     Finished it!
                 </div>
-                <div className='show-card-button'>
-                    Edit
-                </div>
+                <NavLink
+                    to={`/watch-list/edit-show/${id}`}
+                    className='show-card-button'
+                >
+                    <div >
+                        Edit
+                    </div>
+                </NavLink>
             </div>
         </div>
 

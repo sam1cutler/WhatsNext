@@ -13,6 +13,8 @@ import FriendsPage from './Section_Main/CoreContent/FriendsPage';
 import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
 import AddShowToWatch from './Section_Main/CoreContent/AddForms/AddShowToWatch';
 import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
+import EditShowToWatch from './Section_Main/CoreContent/EditForms/EditShowToWatch';
+//import EditShowWatched from './Section_Main/CoreContent/EditForms/EditShowWatched';
 
 
 /* -- Fxns to render header and main screen sections -- */
@@ -28,8 +30,8 @@ function renderHeader() {
         />
       ))}
       {[
-          '/watch-list', '/watch-list/add-show',
-          '/watched-log','/watched-log/add-show', 
+          '/watch-list', '/watch-list/add-show', '/watch-list/edit-show/:showId',
+          '/watched-log','/watched-log/add-show', '/watched-log/edit-show/:showId',
           '/friends', '/friends/add-friend',
         ].map(path => (
         <Route 
@@ -91,6 +93,12 @@ function renderMain() {
         exact
         component={AddFriend}
       />
+      <Route 
+        path='/watch-list/edit-show/:showId'
+        exact
+        component={EditShowToWatch}
+      />
+      
     </>
   )
 }

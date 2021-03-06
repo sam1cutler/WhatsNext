@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import ToWatchCard from './Cards/ToWatchCard';
 import './WatchList.css';
 import ShowsApiService from '../../services/shows-api-service';
+import TokenService from '../../services/token-service';
 
 
 function orderShowList(showList) {
@@ -17,7 +18,7 @@ function orderShowList(showList) {
 //    a) filter by "to-watch" / "watched"
 //    b) sort by sthg (currently just priority for this page, eventually variable)
 function refineShowList(showList) {
-    
+
     let refinedList = [];
     
     showList.forEach( (activeShow) => {
@@ -50,7 +51,10 @@ function WatchList() {
 
     // define useEffect method responsible for API call
     useEffect( () => {
-        ShowsApiService.getShows()
+
+        const activeUser = TokenService.getUserId();
+
+        ShowsApiService.getShows(activeUser)
             .then( showsResults => {
                 setShowList(showsResults);
             })

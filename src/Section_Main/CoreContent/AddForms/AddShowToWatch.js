@@ -1,12 +1,48 @@
+import { useHistory } from 'react-router-dom';
 import './AddShowToWatch.css';
+import ShowsApiService from '../../../services/shows-api-service';
 
 function AddShowToWatch() {
 
-    return(
+    const history = useHistory();
+
+    function handleNewShowFormSubmission(e) {
+
+        console.log('submitting new show')
+        
+        e.preventDefault();
+
+        // de-structure content from the form / package into new object:
+        const { title, service, genre } = e.target;
+        const newShowInfo = {
+            title: title.value,
+            service: service.value,
+            genre: genre.value,
+            priority: 10,
+            watched: false
+        };
+
+        // Use ShowApiService to make POST request
+        ShowsApiService.addNewShow(newShowInfo)
+            .then( () => {
+                history.push({
+                    pathname: '/watch-list'
+                })
+            })
+            .catch(res => {
+                console.log(res.error)
+            })
+
+    }
+
+    return (
 
         <main className='add-show-container'>
             <h2>Add a show to your Watch List</h2>
-            <form className='add-show-form'>
+            <form 
+                className='add-show-form'
+                onSubmit={handleNewShowFormSubmission}
+            >
                 <div className='add-show-section'>
                     <label htmlFor='title'>Title:</label><br />
                     <input type='text' name='title' required />
@@ -28,6 +64,7 @@ function AddShowToWatch() {
                         <option value='Drama'>Drama</option>
                         <option value='Comedy'>Comedy</option>
                         <option value='Documentary'>Documentary</option>
+                        <option value='Cooking'>Cooking</option>
                         <option value='SciFi'>SciFi</option>
                         <option value='Fantasy'>Fantasy</option>
                         <option value='Crime'>Crime</option>
@@ -38,8 +75,8 @@ function AddShowToWatch() {
                     <label htmlFor='priority'>Priority:</label><br />
                     <select name='priority' id='priority'>
                         <option value='top'>Top</option>
-                        <option value='bottom'>Bottom</option>
                         <option value='middle'>Middle</option>
+                        <option value='bottom'>Bottom</option>
                     </select>
                 </div>
                 <div className='add-show-section'>
