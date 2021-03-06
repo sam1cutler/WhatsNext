@@ -1,29 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './LandingPage.css';
 
 function LandingPage() {
 
-    const [count, setCount] = useState(8);
-
-    useEffect( () => {
-        document.title = `Clicker at ${count} clicks.`
-    })
-    
-
     return (
 
         <main className='landing-page-container'>
-
-            
-            <div>
-                <p>You clicked {count} times!</p>
-                <button
-                    onClick={ () => setCount(count - 1)}
-                >
-                    Click me plz
-                </button>
-            </div>
             
             <section>
                 <h2><i>Streamline your streaming!</i></h2>

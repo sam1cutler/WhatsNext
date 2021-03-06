@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import './WatchedCard.css';
 
 function WatchedCard(props) {
 
-    const { title, service, genre, completed, rating } = props.cardInfo;
+    const { id, title, service, genre, completed, rating } = props.cardInfo;
 
     const interimDate = new Date(completed);
     const finalDate = format(interimDate, 'MMM yyyy');
@@ -29,9 +30,14 @@ function WatchedCard(props) {
                 <div>
                     {rating}⭐️
                 </div>
-                <div className='show-card-button'>
-                    Edit
-                </div>
+                <Link
+                    to={`/watched-log/edit-show/${id}`}
+                    className='show-card-button'
+                >
+                    <div >
+                        Edit
+                    </div>
+                </Link>
             </div>
         </div>
     )

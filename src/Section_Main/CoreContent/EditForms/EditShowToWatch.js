@@ -26,7 +26,7 @@ function EditShowToWatch() {
             title: title.value,
             service: service.value,
             genre: genre.value,
-            priority: 10,
+            //priority: 10,
             watched: false
         };
 
@@ -72,7 +72,7 @@ function EditShowToWatch() {
                 setActiveShow(showResult)
             })
 
-    }, [] )
+    }, [showId] )
 
     // destructure relevant values from API-obtained, state-stored show info
     const { title, service, genre } = activeShow || '';
@@ -113,6 +113,7 @@ function EditShowToWatch() {
                         <option value='other'>Other</option>
                     </select>
                 </div>
+                {/*
                 <div className='edit-show-section'>
                     <label htmlFor='priority'>Priority:</label><br />
                     <select name='priority' id='priority'>
@@ -121,6 +122,7 @@ function EditShowToWatch() {
                         <option value='bottom'>Bottom</option>
                     </select>
                 </div>
+                */}
                 <div className='edit-show-section'>
                     <button type='submit' className='edit-show-button'>Update show info</button>
                 </div>
@@ -128,7 +130,7 @@ function EditShowToWatch() {
             <Link
                 to={'/watch-list'}
             >
-                <div className='return-link'>
+                <div className='simple-return-link'>
                     Return to Watch List
                 </div>
             </Link>

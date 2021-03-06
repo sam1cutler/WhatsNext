@@ -1,12 +1,56 @@
+import { useHistory, Link } from 'react-router-dom';
 import './AddShowWatched.css';
+import ShowsApiService from '../../../services/shows-api-service';
 
 function AddShowWatched() {
+
+    const history = useHistory();
+
+    function handleNewShowFormSubmission(e) {
+
+        console.log('submitting new show')
+        
+        e.preventDefault();
+
+        // de-structure content from the form / package into new object:
+        const { title, service, genre, month, year, rating } = e.target;
+
+        // Combine month/year inputs into a UTC-formatted date
+        const startDate = `${month.value}-${year.value}`;
+        const intDate = new Date(startDate);
+        const completed = intDate.toISOString();
+
+        const newShowInfo = {
+            title: title.value,
+            service: service.value,
+            genre: genre.value,
+            completed,
+            rating: rating.value,
+            watched: true,
+        };
+
+        
+        // Use ShowApiService to make POST request
+        ShowsApiService.addNewShow(newShowInfo)
+            .then( () => {
+                history.push({
+                    pathname: '/watched-log'
+                })
+            })
+            .catch(res => {
+                console.log(res.error)
+            })
+            
+    }
 
     return(
 
         <main className='add-show-container'>
             <h2>Add a show to your Log of Watched Shows</h2>
-            <form className='add-show-form'>
+            <form 
+                className='add-show-form'
+                onSubmit={handleNewShowFormSubmission}
+            >
                 <div className='add-show-section'>
                     <label htmlFor='title'>Title:</label><br />
                     <input type='text' name='title' required />
@@ -82,6 +126,13 @@ function AddShowWatched() {
                     <button type='submit' className='add-show-button'>Add show</button>
                 </div>
             </form>
+            <Link
+                to={'/watch-list'}
+            >
+                <div className='simple-return-link'>
+                    Return to Watched Log List
+                </div>
+            </Link>
         </main>
 
     )

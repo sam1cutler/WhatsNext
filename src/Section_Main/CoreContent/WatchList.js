@@ -5,7 +5,7 @@ import './WatchList.css';
 import ShowsApiService from '../../services/shows-api-service';
 import TokenService from '../../services/token-service';
 
-
+/*
 function orderShowList(showList) {
     showList.sort( function(a, b) {
         const c = a.priority;
@@ -13,6 +13,7 @@ function orderShowList(showList) {
         return c-d
     })
 }
+*/
 
 // refineShowList is intended to 
 //    a) filter by "to-watch" / "watched"
@@ -27,7 +28,7 @@ function refineShowList(showList) {
         } 
     })
 
-    orderShowList(refinedList);
+    //orderShowList(refinedList);
 
     return refinedList;
 }

@@ -4,15 +4,13 @@ import './ToWatchCard.css';
 
 function ToWatchCard(props) {
 
-    const { id, title, service, genre, priority } = props.cardInfo;
+    const { id, title, service, genre } = props.cardInfo;
 
     return (
 
         <div className='to-watch-show-card'>
             <div className='to-watch-show-card-half'>
-                <div>
-                    {service}
-                </div>
+                
                 <div>
                     <b>{title}</b>
                 </div>
@@ -23,7 +21,7 @@ function ToWatchCard(props) {
 
             <div className='to-watch-show-card-half'>
                 <div>
-                    {priority}
+                    {service}
                 </div>
                 
                 <div className='show-card-button'>

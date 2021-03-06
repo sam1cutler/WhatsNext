@@ -14,7 +14,7 @@ import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
 import AddShowToWatch from './Section_Main/CoreContent/AddForms/AddShowToWatch';
 import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
 import EditShowToWatch from './Section_Main/CoreContent/EditForms/EditShowToWatch';
-//import EditShowWatched from './Section_Main/CoreContent/EditForms/EditShowWatched';
+import EditShowWatched from './Section_Main/CoreContent/EditForms/EditShowWatched';
 
 
 /* -- Fxns to render header and main screen sections -- */
@@ -98,7 +98,11 @@ function renderMain() {
         exact
         component={EditShowToWatch}
       />
-      
+      <Route 
+        path='/watched-log/edit-show/:showId'
+        exact
+        component={EditShowWatched}
+      />
     </>
   )
 }

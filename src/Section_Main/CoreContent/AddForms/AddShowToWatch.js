@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import './AddShowToWatch.css';
 import ShowsApiService from '../../../services/shows-api-service';
 
@@ -83,6 +83,13 @@ function AddShowToWatch() {
                     <button type='submit' className='add-show-button'>Add show</button>
                 </div>
             </form>
+            <Link
+                to={'/watch-list'}
+            >
+                <div className='simple-return-link'>
+                    Return to Watch List
+                </div>
+            </Link>
         </main>
 
     )

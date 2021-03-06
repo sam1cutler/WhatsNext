@@ -1,4 +1,7 @@
 .signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20% 2%;
     width: 98vw;
 }
@@ -27,4 +30,11 @@
     border-radius: 4px;
     box-shadow: 0 0 7px grey;
     background-color: rgb(182, 195, 196);
+}
+
+.error-message {
+    margin: 15px;
+    color: red;
+    font-style: italic;
+    text-align: center;
 }
