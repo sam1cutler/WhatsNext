@@ -1,0 +1,18 @@
+.to-watch-show-public-card {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 2%; 
+    padding: 2%;
+    border: solid 1px black;
+    border-radius: 3px;
+    background-color: rgb(223, 225, 240);
+    box-shadow: 0 0 6px grey;
+}
+
+.to-watch-show-card-public-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}

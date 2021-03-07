@@ -5,7 +5,12 @@ import './FriendPage.css';
 import FriendsApiService from '../../../services/friends-api-service';
 
 
+function handleDeleteFriend(e) {
 
+    e.preventDefault();
+    console.log('delete me')
+
+}
 
 function FriendPage() {
 
@@ -43,7 +48,10 @@ function FriendPage() {
                     Visit {display_name}'s Watched Log
                 </div>
                 </Link>
-                <button className='delete-friend-button'>
+                <button
+                    className='delete-friend-button'
+                    onClick={e => handleDeleteFriend(e)}
+                >
                     Remove friend
                 </button>
             </div>

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './HeaderFriendPages.css';
 
 function HeaderFriendPages(props) {
@@ -15,18 +15,18 @@ function HeaderFriendPages(props) {
                 </div>
             </div>
             <div className='friend-header-lower'>
-                <Link
+                <NavLink
                     to={`/friends/${id}/watched-log`}
                     className='nav-button'
                 >
                     WATCHED
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                     to={`/friends/${id}/watch-list`}
                     className='nav-button'
                 >
                     TO-WATCH
-                </Link>
+                </NavLink>
             </div>
         </div>
 

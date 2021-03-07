@@ -29,3 +29,7 @@
     height: 60%;
     background-color: rgb(189, 187, 187);
 }
+
+.friend-header-lower .active {
+    box-shadow: 0 0 7px grey;
+  }
