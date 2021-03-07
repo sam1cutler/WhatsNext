@@ -1,16 +1,14 @@
+//import { Link } from 'react-router-dom';
 import './FriendCard.css';
 
 function FriendCard(props) {
 
-    const { name, username } = props.friendInfo;
+    const { recipient_name } = props.friendInfo;
 
     return (
         <div className='friend-card'>
-            <div>
-                {name}
-            </div>
-            <div>
-                {username}
+            <div className='friend-card-element'>
+                <p><b>{recipient_name}</b></p>
             </div>
         </div>
     )

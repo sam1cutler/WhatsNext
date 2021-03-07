@@ -1,0 +1,15 @@
+.friends-content-container {
+    padding: 3%;
+    width: 94%;
+    position: fixed;
+    top: 27%;
+    left: 3%;
+    bottom: 3%;
+    overflow: auto;
+    background-color: rgb(206, 206, 206)
+}
+
+.get-big {
+    margin: 15px;
+    font-size: 20pt;
+}

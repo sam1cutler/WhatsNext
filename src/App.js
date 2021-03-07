@@ -1,20 +1,29 @@
 import './App.css';
 import { Route } from 'react-router-dom';
 
+// Header stuff
 import HeaderNewUser from './Section_Header/HeaderNewUser';
 import HeaderRegisteredUser from './Section_Header/HeaderRegisteredUser';
 
+// Acct mgmt stuff
 import LandingPage from './Section_Main/AccountMgmt/LandingPage';
 import SignupPage from './Section_Main/AccountMgmt/SignupPage';
 import LoginPage from './Section_Main/AccountMgmt/LoginPage';
+
+// Core content stuff
 import WatchList from './Section_Main/CoreContent/WatchList';
-import WatchedLog from './Section_Main/CoreContent/WatchedLog';
-import FriendsPage from './Section_Main/CoreContent/FriendsPage';
-import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
 import AddShowToWatch from './Section_Main/CoreContent/AddForms/AddShowToWatch';
-import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
 import EditShowToWatch from './Section_Main/CoreContent/EditForms/EditShowToWatch';
+
+import WatchedLog from './Section_Main/CoreContent/WatchedLog';
+import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
 import EditShowWatched from './Section_Main/CoreContent/EditForms/EditShowWatched';
+
+import FriendsList from './Section_Main/CoreContent/FriendsList';
+import FriendPage from './Section_Main/CoreContent/EditForms/FriendPage';
+import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
+import FriendsPublicContainer from './Section_Main/CoreContent/FriendsPublicPages/FriendsPublicContainer';
+
 
 
 /* -- Fxns to render header and main screen sections -- */
@@ -32,7 +41,8 @@ function renderHeader() {
       {[
           '/watch-list', '/watch-list/add-show', '/watch-list/edit-show/:showId',
           '/watched-log','/watched-log/add-show', '/watched-log/edit-show/:showId',
-          '/friends', '/friends/add-friend',
+          '/friends', '/friends/:friendId', '/friends/add-friend',
+          '/friends/:friendId/watch-list', '/friends/:friendId/watched-log'
         ].map(path => (
         <Route 
           exact
@@ -63,20 +73,11 @@ function renderMain() {
         exact
         component={LoginPage}
       />
+
       <Route 
         path='/watch-list'
         exact
         component={WatchList}
-      />
-      <Route 
-        path='/watched-log'
-        exact
-        component={WatchedLog}
-      />
-      <Route 
-        path='/friends'
-        exact
-        component={FriendsPage}
       />
       <Route 
         path='/watch-list/add-show'
@@ -84,25 +85,54 @@ function renderMain() {
         component={AddShowToWatch}
       />
       <Route 
-        path='/watched-log/add-show'
-        exact
-        component={AddShowWatched}
-      />
-      <Route 
-        path='/friends/add-friend'
-        exact
-        component={AddFriend}
-      />
-      <Route 
         path='/watch-list/edit-show/:showId'
         exact
         component={EditShowToWatch}
+      />
+
+      <Route 
+        path='/watched-log'
+        exact
+        component={WatchedLog}
+      />
+      <Route 
+        path='/watched-log/add-show'
+        exact
+        component={AddShowWatched}
       />
       <Route 
         path='/watched-log/edit-show/:showId'
         exact
         component={EditShowWatched}
       />
+
+      <Route 
+        path='/friends'
+        exact
+        component={FriendsList}
+      />
+      <Route 
+        path='/friends/:friendId'
+        exact
+        component={FriendPage}
+      />
+      <Route 
+        path='/friends/add-friend'
+        exact
+        component={AddFriend}
+      />
+      {[
+          '/friends/:friendId/watch-list', '/friends/:friendId/watched-log'
+        ].map(path => (
+        <Route 
+          exact
+          key={path}
+          path={path}
+          component={FriendsPublicContainer}
+        />
+      ))} 
+      
+      
     </>
   )
 }
