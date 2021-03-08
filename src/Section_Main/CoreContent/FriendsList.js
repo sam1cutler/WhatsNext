@@ -15,7 +15,7 @@ function renderFriendsList(friendsList) {
         return (
             <Link
                 key={i}
-                to={`/friends/${activeFriend.recipient_id}`}
+                to={`/friends/${activeFriend.id}/${activeFriend.recipient_id}`}
             >
                 <FriendCard 
                     friendInfo={activeFriend}
@@ -38,7 +38,6 @@ function FriendsList() {
             })
     }, [] )
 
-    // const listOfFriends = renderFriendsList(STORE.friends);
     const listOfFriends = renderFriendsList(friendsList);
 
     return(

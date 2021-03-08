@@ -7,8 +7,6 @@ function AddShowWatched() {
     const history = useHistory();
 
     function handleNewShowFormSubmission(e) {
-
-        console.log('submitting new show')
         
         e.preventDefault();
 

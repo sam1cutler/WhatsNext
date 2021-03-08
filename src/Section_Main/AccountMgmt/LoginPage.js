@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import './LoginPage.css';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
+//import config from '../../config';
 
 
 function LoginPage() {
@@ -30,11 +31,11 @@ function LoginPage() {
     
                 // save authToken in the browser
                 TokenService.saveAuthToken(res.authToken)
-    
+                
                 // save user's ID in the browser...
                 TokenService.saveUserId(res.user_id)
     
-                // push push to proper "logged in" welcome page
+                // push to proper "logged in" welcome page
                 history.push({
                     pathname: '/watch-list'
                 })
@@ -48,6 +49,8 @@ function LoginPage() {
                 console.log(res.error)
             })
     }
+
+    
 
     return (
 

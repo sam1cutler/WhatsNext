@@ -4,6 +4,7 @@ import './HeaderFriendPages.css';
 function HeaderFriendPages(props) {
 
     const { id, display_name} = props.friend;
+    const { connectionId } = props.connectionId;
 
     return (
         <div className='friend-page-header-container'>
@@ -16,13 +17,13 @@ function HeaderFriendPages(props) {
             </div>
             <div className='friend-header-lower'>
                 <NavLink
-                    to={`/friends/${id}/watched-log`}
+                    to={`/friends/${connectionId}/${id}/watched-log`}
                     className='nav-button'
                 >
                     WATCHED
                 </NavLink>
                 <NavLink
-                    to={`/friends/${id}/watch-list`}
+                    to={`/friends/${connectionId}/${id}/watch-list`}
                     className='nav-button'
                 >
                     TO-WATCH

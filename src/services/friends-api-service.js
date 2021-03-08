@@ -27,7 +27,31 @@ const FriendsApiService = {
                     : res.json()
             )
     },
-    //deleteFriendConnection()
+    addFriendConnection(targetFriendEmail) {
+        return fetch(`${config.API_ENDPOINT}/friends`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+            body: JSON.stringify(targetFriendEmail)
+        })
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Something went wrong with add friend request.')
+                }
+            })
+    },
+    deleteFriendConnection(connection) {
+        return fetch(`${config.API_ENDPOINT}/friends/${connection}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`,
+            },
+        })
+
+    }
 
 }
 

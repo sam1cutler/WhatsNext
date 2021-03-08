@@ -32,9 +32,11 @@ function SignupPage() {
                         password: password.value
                     })
                         .then(res => {
-                            TokenService.saveAuthToken(res.saveAuthToken)
+                            TokenService.saveAuthToken(res.authToken)
+                            TokenService.saveUserId(res.user_id)
 
                             email.value = '';
+                            display_name.value = '';
                             password.value = '';
                             passwordRepeat.value = '';
 

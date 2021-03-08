@@ -1,7 +1,29 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import './HeaderNewUser.css';
+import AuthApiService from '../services/auth-api-service';
+import TokenService from '../services/token-service';
 
 function HeaderNewUser() {
+
+    const history = useHistory();
+
+    function handleEnterDemoMode() {
+
+        AuthApiService.postLogin({
+            email: 'jeremy@gmail.com',
+            password: 'gH4$gH4$'
+        })
+            .then(res => {
+                TokenService.saveUserId(res.user_id);
+                TokenService.saveAuthToken(res.authToken);
+                history.push({
+                    pathname: '/watch-list'
+                })
+            })
+            .catch(res => {
+                console.log(res.error)
+            })
+    }
     
     return (
         <header>
@@ -11,14 +33,7 @@ function HeaderNewUser() {
                         <h1>What's Next?</h1>
                     </Link>
                 </div>
-                <div className='header-component links-section'>
-                    <NavLink 
-                        to='/'
-                        className='header-link-container'
-                    >
-                        <p>About</p>
-                    </NavLink>
-                </div>
+                
             </div>
             <div className='header-lower'>
                 <NavLink
@@ -33,12 +48,13 @@ function HeaderNewUser() {
                 >
                     Login
                 </NavLink>
-                <NavLink
+                <div
                     to='/watch-list'
                     className='nav-button'
+                    onClick={handleEnterDemoMode}
                 >
                     Demo
-                </NavLink>
+                </div>
             </div>
         </header>
     )

@@ -1,8 +1,30 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './LandingPage.css';
+import AuthApiService from '../../services/auth-api-service';
+import TokenService from '../../services/token-service';
 
 function LandingPage() {
+
+    const history = useHistory();
+
+    function handleEnterDemoMode() {
+
+        AuthApiService.postLogin({
+            email: 'jeremy@gmail.com',
+            password: 'gH4$gH4$'
+        })
+            .then(res => {
+                TokenService.saveUserId(res.user_id);
+                TokenService.saveAuthToken(res.authToken);
+                history.push({
+                    pathname: '/watch-list'
+                })
+            })
+            .catch(res => {
+                console.log(res.error)
+            })
+    }
 
     return (
 
@@ -45,12 +67,13 @@ function LandingPage() {
             <section>
                 <h2>Learn More</h2>
                 <div className='next-steps-container'>
-                    <NavLink
+                    <div
                         to='/watch-list'
                         className='next-step'
+                        onClick={handleEnterDemoMode}
                     >
                             Test out a demo to see how the app functions as an established user.   
-                    </NavLink>
+                    </div>
 
                     <NavLink
                         to='/signup'

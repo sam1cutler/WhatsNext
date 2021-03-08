@@ -1,21 +1,32 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './FriendPage.css';
 import FriendsApiService from '../../../services/friends-api-service';
 
 
-function handleDeleteFriend(e) {
-
-    e.preventDefault();
-    console.log('delete me')
-
-}
-
 function FriendPage() {
 
     const [friendInfo, setFriendInfo ] = useState( {} );
-    const { friendId } = useParams();
+    const history = useHistory();
+    const { friendId, connectionId } = useParams();
+
+    function handleDeleteFriend(e) {
+
+        e.preventDefault();
+        console.log('delete me')
+
+        FriendsApiService.deleteFriendConnection(connectionId)
+            .then( () => {
+                history.push({
+                    pathname: '/friends'
+                })
+            })
+            .catch(error => {
+                // eventually communicate
+                console.log(error)
+            })
+    }
 
     useEffect( () => {
 
@@ -35,14 +46,14 @@ function FriendPage() {
                 <h3>{display_name}</h3>
                 <p>{email}</p>
                 <Link
-                    to={`/friends/${id}/watch-list`}
+                    to={`/friends/${connectionId}/${id}/watch-list`}
                 >
                     <div className='friend-page-linkout-button'>
                         Visit {display_name}'s Watch List
                     </div>
                 </Link>
                 <Link
-                    to={`/friends/${id}/watched-log`}
+                    to={`/friends/${connectionId}/${id}/watched-log`}
                 >
                 <div className='friend-page-linkout-button'>
                     Visit {display_name}'s Watched Log

@@ -40,7 +40,6 @@ function PublicWatchedLog() {
     useEffect( () => {
         ShowsApiService.getShows(friendId)
             .then( friendShowsList => {
-                console.log(friendShowsList)
                 setShowsList(friendShowsList);
             })
     }, [friendId] )

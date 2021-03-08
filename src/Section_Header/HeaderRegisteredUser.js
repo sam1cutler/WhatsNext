@@ -1,13 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
 import './HeaderRegisteredUser.css';
+import TokenService from '../services/token-service';
 
 function HeaderRegisteredUser() {
+
+    function handleLogout() {
+        TokenService.clearLocalStorage();
+    }
     
     return (
         <header>
             <div className='header-upper'>
                 <div className='header-component'>
-                    <Link to='/'>
+                    <Link to='/watch-list'>
                         <h1>What's Next?</h1>
                     </Link>
                 </div>
@@ -15,8 +20,9 @@ function HeaderRegisteredUser() {
                     <NavLink 
                         to='/'
                         className='header-link-container'
+                        onClick={handleLogout}
                     >
-                        <p>Exit Demo</p>
+                        <p>Logout</p>
                     </NavLink>
                 </div>
             </div>

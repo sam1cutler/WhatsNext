@@ -41,8 +41,8 @@ function renderHeader() {
       {[
           '/watch-list', '/watch-list/add-show', '/watch-list/edit-show/:showId',
           '/watched-log','/watched-log/add-show', '/watched-log/edit-show/:showId',
-          '/friends', '/friends/:friendId', '/friends/add-friend',
-          '/friends/:friendId/watch-list', '/friends/:friendId/watched-log'
+          '/friends', '/friends/:connectionId/:friendId', '/friends/add-friend',
+          '/friends/:connectionId/:friendId/watch-list', '/friends/:connectionId/:friendId/watched-log'
         ].map(path => (
         <Route 
           exact
@@ -112,7 +112,7 @@ function renderMain() {
         component={FriendsList}
       />
       <Route 
-        path='/friends/:friendId'
+        path='/friends/:connectionId/:friendId'
         exact
         component={FriendPage}
       />
@@ -122,7 +122,7 @@ function renderMain() {
         component={AddFriend}
       />
       {[
-          '/friends/:friendId/watch-list', '/friends/:friendId/watched-log'
+          '/friends/:connectionId/:friendId/watch-list', '/friends/:connectionId/:friendId/watched-log'
         ].map(path => (
         <Route 
           exact
