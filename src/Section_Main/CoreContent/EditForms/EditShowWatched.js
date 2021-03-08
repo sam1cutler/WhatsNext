@@ -16,8 +16,6 @@ function EditShowWatched() {
 
     /*-- handler function for EDIT SHOW submissions --*/
     function handleEditShowFormSubmission(e) {
-
-        console.log('editing a show')
         
         e.preventDefault();
 
@@ -25,7 +23,7 @@ function EditShowWatched() {
         const { title, service, genre, month, year, rating } = e.target;
 
         // Combine month/year inputs into a UTC-formatted date
-        const startDate = `${month.value}-${year.value}`;
+        const startDate = `${year.value}-${month.value}-15T00:00:00`;
         const intDate = new Date(startDate);
         const completed = intDate.toISOString();
 
@@ -83,7 +81,7 @@ function EditShowWatched() {
     }, [showId] )
 
     // destructure relevant values from API-obtained, state-stored show info
-    const { title } = activeShow || '';
+    const { title, service, month, year } = activeShow || '';
 
     /*
     // further destructure month/year from completed date:
@@ -117,7 +115,7 @@ function EditShowWatched() {
                 </div>
                 <div className='edit-show-section'>
                     <label htmlFor='service'>Streaming Service:</label><br />
-                    <select name='service' id='service'>
+                    <select name='service' id='service' defaultValue={service}>
                         <option value='Netflix'>Netflix</option>
                         <option value='Hulu'>Hulu</option>
                         <option value='HBOMax'>HBOMax</option>
@@ -143,31 +141,31 @@ function EditShowWatched() {
                     <div className='date-picker'>
                         <div className='date-component'>
                             <label htmlFor='month'>Month:</label><br />
-                            <select name='month' id='month' >
-                                <option value='Jan'>Jan</option>
-                                <option value='Feb'>Feb</option>
-                                <option value='Mar'>Mar</option>
-                                <option value='Apr'>Apr</option>
-                                <option value='May'>May</option>
-                                <option value='Jun'>Jun</option>
-                                <option value='Jul'>Jul</option>
-                                <option value='Aug'>Aug</option>
-                                <option value='Sep'>Sep</option>
-                                <option value='Oct'>Oct</option>
-                                <option value='Nov'>Nov</option>
-                                <option value='Dec'>Dec</option>
+                            <select name='month' id='month' defaultValue={month}>
+                                <option value='01'>Jan</option>
+                                <option value='02'>Feb</option>
+                                <option value='03'>Mar</option>
+                                <option value='04'>Apr</option>
+                                <option value='05'>May</option>
+                                <option value='06'>Jun</option>
+                                <option value='07'>Jul</option>
+                                <option value='08'>Aug</option>
+                                <option value='09'>Sep</option>
+                                <option value='10'>Oct</option>
+                                <option value='11'>Nov</option>
+                                <option value='12'>Dec</option>
                             </select>
                         </div>
                         <div className='date-component'>
                             <label htmlFor='year'>Year:</label><br />
-                            <select name='year' id='year' defaultValue='2019'>
-                                <option value='2015'>2015</option>
-                                <option value='2016'>2016</option>
-                                <option value='2017'>2017</option>
-                                <option value='2018'>2018</option>
-                                <option value='2019'>2019</option>
-                                <option value='2020'>2020</option>
+                            <select name='year' id='year' defaultValue={year}>
                                 <option value='2021'>2021</option>
+                                <option value='2020'>2020</option>
+                                <option value='2019'>2019</option>
+                                <option value='2018'>2018</option>
+                                <option value='2017'>2017</option>
+                                <option value='2016'>2016</option>
+                                <option value='2015'>2015</option>
                             </select>
                         </div>
                     </div>

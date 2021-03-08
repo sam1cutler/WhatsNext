@@ -15,11 +15,8 @@ function AddShowWatched() {
 
         // Combine month/year inputs into a UTC-formatted date
         const startDate = `${year.value}-${month.value}-15T00:00:00`;
-         console.log(startDate);
         const intDate = new Date(startDate);
-         console.log(intDate)
         const completed = intDate.toISOString();
-         console.log(completed)
 
         const newShowInfo = {
             title: title.value,
