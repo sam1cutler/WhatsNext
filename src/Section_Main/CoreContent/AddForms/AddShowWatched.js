@@ -14,9 +14,12 @@ function AddShowWatched() {
         const { title, service, genre, month, year, rating } = e.target;
 
         // Combine month/year inputs into a UTC-formatted date
-        const startDate = `${month.value}-${year.value}`;
+        const startDate = `${month.value}-${year.value}-15`;
+        console.log(startDate);
         const intDate = new Date(startDate);
+        console.log(intDate)
         const completed = intDate.toISOString();
+        console.log(completed)
 
         const newShowInfo = {
             title: title.value,

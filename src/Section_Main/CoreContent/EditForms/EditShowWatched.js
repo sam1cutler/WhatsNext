@@ -187,7 +187,7 @@ function EditShowWatched() {
                 </div>
             </form>
             <Link
-                to={'/watch-list'}
+                to={'/watched-log'}
             >
                 <div className='simple-return-link'>
                     Return to Watched Log List
