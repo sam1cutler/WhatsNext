@@ -58,7 +58,7 @@ function EditShowWatched() {
         ShowsApiService.deleteShow(showId)
             .then( () => {
                 history.push({
-                    pathname: '/watch-list'
+                    pathname: '/watched-log'
                 })
             })
             .catch(error => {

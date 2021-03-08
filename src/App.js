@@ -14,7 +14,6 @@ import LoginPage from './Section_Main/AccountMgmt/LoginPage';
 import WatchList from './Section_Main/CoreContent/WatchList';
 import AddShowToWatch from './Section_Main/CoreContent/AddForms/AddShowToWatch';
 import EditShowToWatch from './Section_Main/CoreContent/EditForms/EditShowToWatch';
-import FinishedShowForm from './Section_Main/CoreContent/EditForms/FinishedShowForm';
 
 import WatchedLog from './Section_Main/CoreContent/WatchedLog';
 import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
@@ -40,7 +39,7 @@ function renderHeader() {
         />
       ))}
       {[
-          '/watch-list', '/watch-list/add-show', '/watch-list/edit-show/:showId', '/watch-list/finished-show/:showId',
+          '/watch-list', '/watch-list/add-show', '/watch-list/edit-show/:showId', 
           '/watched-log','/watched-log/add-show', '/watched-log/edit-show/:showId',
           '/friends', '/friends/:connectionId/:friendId', '/friends/add-friend',
           '/friends/:connectionId/:friendId/watch-list', '/friends/:connectionId/:friendId/watched-log'
@@ -89,11 +88,6 @@ function renderMain() {
         path='/watch-list/edit-show/:showId'
         exact
         component={EditShowToWatch}
-      />
-      <Route 
-        path='/watch-list/finished-show/:showId'
-        exact
-        component={FinishedShowForm}
       />
 
       <Route 
