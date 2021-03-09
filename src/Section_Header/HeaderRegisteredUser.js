@@ -1,4 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
+import { FaTv, FaUserFriends } from 'react-icons/fa';
+import { FiArrowRightCircle } from 'react-icons/fi';
+import { AiOutlineCheckSquare } from 'react-icons/ai';
 import './HeaderRegisteredUser.css';
 import TokenService from '../services/token-service';
 
@@ -11,12 +14,12 @@ function HeaderRegisteredUser() {
     return (
         <header>
             <div className='header-upper'>
-                <div className='header-component'>
+                <div className='header-title'>
                     <Link to='/watch-list'>
                         <h1>What's Next?</h1>
                     </Link>
                 </div>
-                <div className='header-component links-section'>
+                <div className='header-links-section'>
                     <NavLink 
                         to='/'
                         className='header-link-container'
@@ -31,19 +34,19 @@ function HeaderRegisteredUser() {
                     to='/watched-log'
                     className='nav-button'
                 >
-                    WATCHED
+                    <AiOutlineCheckSquare />
                 </NavLink>
                 <NavLink
                     to='/watch-list'
                     className='nav-button'
                 >
-                    TO-WATCH
+                    <FiArrowRightCircle />
                 </NavLink>
                 <NavLink
                     to='/friends'
                     className='nav-button'
                 >
-                    FRIENDS
+                    <FaUserFriends />
                 </NavLink>
             </div>
         </header>

@@ -1,15 +1,47 @@
 .to-watch-show-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin: 5% 2%; 
     padding: 2%;
+    /*
     border: solid 1px black;
     border-radius: 3px;
     background-color: rgb(223, 225, 240);
     box-shadow: 0 0 6px grey;
+    */
 }
 
-.to-watch-show-card-half {
+.show-card-logo-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-right: 5%;
+}
+
+.show-card-content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 2%;
+    width: 60%;
+}
+
+.show-card-content-half {
+    margin: 2%;
+}
+
+.show-card-buttons-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2%;
+    width: 15%;
+}
+
+.to-watch-show-card-top-half {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -17,14 +49,35 @@
     margin: 5px;
 }
 
+.show-title-div {
+    flex-basis: 5;
+    text-align: left;
+}
+
+.to-watch-show-card-bottom-half {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+}
+
 .show-card-button {
-    margin: 1%;
-    padding: 2%;
-    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 7%;
+    padding: 5%;
+    font-size: 2rem;
     text-align: center;
+    
+    border: none;
+    background-color: white;
+    /*
     border: 1px solid black;
     border-radius: 3px;
-    background-color: rgb(206, 217, 218);
+    background-color: white;
+    */
 }
 
 .finish-show-review-section {
@@ -77,4 +130,13 @@
     border: 1px solid black;
     border-radius: 3px;
     background-color: rgb(218, 206, 209);
+}
+
+.show-card-logo-div {
+    width: 15%;
+}
+
+
+.service-logo {
+    width: 100%;
 }

@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import ShowsApiService from '../../../services/shows-api-service';
 import './ToWatchCard.css';
-
+import { AiOutlineCheckSquare, AiOutlineEdit } from 'react-icons/ai';
+import logoNetflix from '../../../images/Netflix_Symbol_PMS.png';
 
 
 function ToWatchCard(props) {
@@ -100,6 +101,7 @@ function ToWatchCard(props) {
             ? renderRatingForm()
             : null
 
+    /*
     return (
 
         <div className='to-watch-show-card'>
@@ -132,6 +134,46 @@ function ToWatchCard(props) {
                     </div>
                 </Link>
             </div>
+            {ratingForm}
+        </div>
+
+    )
+    */
+
+    return (
+
+        <div className='to-watch-show-card'>
+
+            <div className='show-card-logo-div'>
+                <img src={logoNetflix} className='service-logo'/>
+            </div>
+
+            <div className='show-card-content-div'>
+                <div className='show-title-div show-card-content-half'>
+                    <b>{title}</b> ({service})
+                </div>
+                <div className='show-card-content-half'>
+                    {genre}
+                </div>
+            </div>
+
+            <div className='show-card-buttons-div'>
+                <button
+                    className='show-card-button'
+                    onClick={e => handleFinishingShow(e)}
+                >
+                    <AiOutlineCheckSquare />
+                </button>
+                <Link
+                    to={`/watch-list/edit-show/${id}`}
+                    className='show-card-button'
+                >
+                    <div >
+                        <AiOutlineEdit />
+                    </div>
+                </Link>
+            </div>
+            
             {ratingForm}
         </div>
 

@@ -60,6 +60,7 @@ function AddShowWatched() {
                         <option value='Hulu'>Hulu</option>
                         <option value='HBOMax'>HBOMax</option>
                         <option value='Amazon Prime'>Amazon Prime</option>
+                        <option value='Disney'>Disney+</option>
                         <option value='other'>Other</option>
                         <option value='dont-know'>Don't know</option>
                     </select>

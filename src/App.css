@@ -21,7 +21,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 15%;
+  height: 25%;
   overflow: auto;
 }
 
@@ -29,11 +29,11 @@ main {
   padding: 3%;
   width: 100%;
   position: fixed;
-  top: 15%;
+  top: 25%;
   left: 0;
   bottom: 0;
   overflow: auto;
-  background-color: rgb(224, 224, 224)
+  background-color: rgb(255, 255, 255)
 }
 
 /*--- overall header styles ---*/
@@ -46,7 +46,7 @@ main {
   margin: 0;
   padding: 1% 5%;
   height: 40%;
-  background-color: rgb(160, 159, 159);
+  background-color: rgb(255, 255, 255);
 }
 
 .header-upper .active {
@@ -59,10 +59,12 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 3rem;
   margin: 0;
   padding: 1% 3%;
   height: 60%;
-  background-color: rgb(189, 187, 187);
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 1px grey;
 }
 
 .nav-button {
@@ -75,21 +77,24 @@ main {
   padding: 2%;
   height: 80%;
   width: 31%;
+  /*
   border: 1px solid black;
+  */
   border-radius: 4px;
-  background-color: rgb(182, 195, 196);
+  
+  background-color: white;
 }
 
 .header-lower .active {
   box-shadow: 0 0 7px grey;
 }
 
-.header-component {
-  width: 100%;
+.header-title {
+  width: 70%;
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin: 0;
   text-align: left;
 }
@@ -99,7 +104,8 @@ p {
   margin: 0;
 }
 
-header .links-section {
+header-links-section {
+  width: 30%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;

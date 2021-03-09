@@ -81,7 +81,7 @@ function EditShowWatched() {
     }, [showId] )
 
     // destructure relevant values from API-obtained, state-stored show info
-    const { title, service, month, year } = activeShow || '';
+    const { title, service, genre, month, year } = activeShow || '';
 
     /*
     // further destructure month/year from completed date:
@@ -115,18 +115,19 @@ function EditShowWatched() {
                 </div>
                 <div className='edit-show-section'>
                     <label htmlFor='service'>Streaming Service:</label><br />
-                    <select name='service' id='service' defaultValue={service}>
+                    <select name='service' id='service' defaultValue={service} key={service}>
                         <option value='Netflix'>Netflix</option>
                         <option value='Hulu'>Hulu</option>
                         <option value='HBOMax'>HBOMax</option>
                         <option value='Amazon Prime'>Amazon Prime</option>
+                        <option value='Disney'>Disney+</option>
                         <option value='other'>Other</option>
                         <option value='dont-know'>Don't know</option>
                     </select>
                 </div>
                 <div className='edit-show-section'>
                     <label htmlFor='genre'>Genre:</label><br />
-                    <select name='genre' id='genre'>
+                    <select name='genre' id='genre' key={genre}>
                         <option value='Drama'>Drama</option>
                         <option value='Comedy'>Comedy</option>
                         <option value='Documentary'>Documentary</option>
@@ -141,7 +142,7 @@ function EditShowWatched() {
                     <div className='date-picker'>
                         <div className='date-component'>
                             <label htmlFor='month'>Month:</label><br />
-                            <select name='month' id='month' defaultValue={month}>
+                            <select name='month' id='month' defaultValue={month} key={month}>
                                 <option value='01'>Jan</option>
                                 <option value='02'>Feb</option>
                                 <option value='03'>Mar</option>
@@ -158,7 +159,7 @@ function EditShowWatched() {
                         </div>
                         <div className='date-component'>
                             <label htmlFor='year'>Year:</label><br />
-                            <select name='year' id='year' defaultValue={year}>
+                            <select name='year' id='year' defaultValue={year} key={year}>
                                 <option value='2021'>2021</option>
                                 <option value='2020'>2020</option>
                                 <option value='2019'>2019</option>
