@@ -2,8 +2,16 @@ import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import ShowsApiService from '../../../services/shows-api-service';
 import './ToWatchCard.css';
-import { AiOutlineCheckSquare, AiOutlineEdit } from 'react-icons/ai';
-import logoNetflix from '../../../images/Netflix_Symbol_PMS.png';
+import { AiOutlineCheckSquare } from 'react-icons/ai';
+import { RiEdit2Line } from 'react-icons/ri';
+import { ImCancelCircle } from 'react-icons/im'
+import logoNetflix from '../../../images/Netflix_Logo_CMYK.png';
+import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
+import logoDisney from '../../../images/disney.svg'
+import logoHbo from '../../../images/hboMax.png'
+import logoPrime from '../../../images/prime2.svg'
+
+
 
 
 function ToWatchCard(props) {
@@ -12,6 +20,14 @@ function ToWatchCard(props) {
     const history = useHistory();
 
     const { id, title, service, genre } = props.cardInfo;
+
+    const logos = {
+        'Netflix': logoNetflix,
+        'Hulu': logoHulu,
+        'Disney': logoDisney,
+        'HBOMax': logoHbo,
+        'Amazon Prime': logoPrime
+    }
 
     /*-- handler function for SUBMITTING "Finished" from --*/
     function handleFinishedShowFormSubmission(e) {    
@@ -64,7 +80,7 @@ function ToWatchCard(props) {
                     onSubmit={e => handleFinishedShowFormSubmission(e)}
                 >
                     <div className='finish-show-form-section'>
-                        <label htmlFor='rating'>How was it?</label><br />
+                        <label htmlFor='rating' className='finish-q-label'>How was it?</label>
                         <select name='rating' id='rating'>
                             <option value='1'>1⭐️</option>
                             <option value='2'>2⭐️</option>
@@ -78,7 +94,7 @@ function ToWatchCard(props) {
                             type='submit'
                             className='finish-show-button'
                         >
-                            Submit
+                            Finished!
                         </button>
                     </div>
                 </form>
@@ -88,7 +104,7 @@ function ToWatchCard(props) {
                         className='finish-show-cancel-button'
                         onClick={e => handleCancelFinish(e)}
                     >
-                        Cancel
+                        <ImCancelCircle />
                     </button>
                 </div>
             </div>
@@ -101,79 +117,41 @@ function ToWatchCard(props) {
             ? renderRatingForm()
             : null
 
-    /*
-    return (
-
-        <div className='to-watch-show-card'>
-            <div className='to-watch-show-card-half'>
-                
-                <div>
-                    <b>{title}</b>
-                </div>
-                <div>
-                    {genre}
-                </div>
-            </div>
-
-            <div className='to-watch-show-card-half'>
-                <div>
-                    {service}
-                </div>
-                <button
-                    className='show-card-button'
-                    onClick={e => handleFinishingShow(e)}
-                >
-                    Finished it!
-                </button>
-                <Link
-                    to={`/watch-list/edit-show/${id}`}
-                    className='show-card-button'
-                >
-                    <div >
-                        Edit
-                    </div>
-                </Link>
-            </div>
-            {ratingForm}
-        </div>
-
-    )
-    */
-
     return (
 
         <div className='to-watch-show-card'>
 
-            <div className='show-card-logo-div'>
-                <img src={logoNetflix} className='service-logo'/>
-            </div>
-
-            <div className='show-card-content-div'>
-                <div className='show-title-div show-card-content-half'>
-                    <b>{title}</b> ({service})
+            <div className='to-watch-card-content'>
+                <div className='show-card-logo-div'>
+                    <img src={logos[service]} className='service-logo' alt={`logo - ${service}`}/>
                 </div>
-                <div className='show-card-content-half'>
-                    {genre}
-                </div>
-            </div>
 
-            <div className='show-card-buttons-div'>
-                <button
-                    className='show-card-button'
-                    onClick={e => handleFinishingShow(e)}
-                >
-                    <AiOutlineCheckSquare />
-                </button>
-                <Link
-                    to={`/watch-list/edit-show/${id}`}
-                    className='show-card-button'
-                >
-                    <div >
-                        <AiOutlineEdit />
+                <div className='show-card-content-div'>
+                    <div className='show-title-div show-card-main-info-half'>
+                        <b>{title}</b>
                     </div>
-                </Link>
+                    <div className='show-card-main-info-half'>
+                        {genre}
+                    </div>
+                </div>
+
+                <div className='show-card-buttons-div'>
+                    <button
+                        className='show-card-button'
+                        onClick={e => handleFinishingShow(e)}
+                    >
+                        <AiOutlineCheckSquare />
+                    </button>
+                    <Link
+                        to={`/watch-list/edit-show/${id}`}
+                        className='show-card-button'
+                    >
+                        <div >
+                            <RiEdit2Line />
+                        </div>
+                    </Link>
+                </div>
             </div>
-            
             {ratingForm}
         </div>
 

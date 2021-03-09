@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { FaTv, FaUserFriends } from 'react-icons/fa';
+import { FaUserFriends } from 'react-icons/fa';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { AiOutlineCheckSquare } from 'react-icons/ai';
 import './HeaderRegisteredUser.css';
