@@ -16,7 +16,7 @@ const FriendsApiService = {
             )
     },
     getUserInfo(user) {
-        return fetch(`${config.API_ENDPOINT}/users/${user}/public`, {
+        return fetch(`${config.API_ENDPOINT}/users/${user}/public/info`, {
             headers: {
                 'Authorization': `bearer ${TokenService.getAuthToken()}`
             }

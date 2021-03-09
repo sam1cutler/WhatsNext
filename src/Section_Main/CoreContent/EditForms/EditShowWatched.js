@@ -3,7 +3,7 @@ import { useHistory, useParams, Link } from 'react-router-dom';
 //import { format } from 'date-fns';
 import './EditShowWatched.css';
 import ShowsApiService from '../../../services/shows-api-service';
-import TokenService from '../../../services/token-service';
+//import TokenService from '../../../services/token-service';
 
 function EditShowWatched() {
 
@@ -11,8 +11,6 @@ function EditShowWatched() {
     const [ activeShow, setActiveShow ] = useState( [] );
     const history = useHistory();
     const { showId } = useParams();
-
-    //console.log(activeShow)
 
     /*-- handler function for EDIT SHOW submissions --*/
     function handleEditShowFormSubmission(e) {
@@ -71,9 +69,9 @@ function EditShowWatched() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
-        const activeUser = TokenService.getUserId();
+        //const activeUser = TokenService.getUserId();
 
-        ShowsApiService.getShowById(activeUser, showId)
+        ShowsApiService.getShowById(showId)
             .then( showResult => {
                 setActiveShow(showResult)
             })

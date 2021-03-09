@@ -38,7 +38,7 @@ function PublicWatchList() {
 
     // API call to /shows endpoint to get friend's show info
     useEffect( () => {
-        ShowsApiService.getShows(friendId)
+        ShowsApiService.getShowsPublic(friendId)
             .then( friendShowsList => {
                 setShowsList(friendShowsList);
             })

@@ -1,11 +1,15 @@
 import config from '../config';
 import TokenService from './token-service';
-//import TokenService from './token-service';
 
 const ShowsApiService = {
 
-    getShows(user) {
-        return fetch(`${config.API_ENDPOINT}/shows/get/${user}`)
+    getShows() {
+        return fetch(`${config.API_ENDPOINT}/shows/`, {
+            headers: {
+                'content-type': 'application/json',
+                'Authorization': `bearer ${TokenService.getAuthToken()}`,
+            }
+        })
             .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
@@ -13,8 +17,12 @@ const ShowsApiService = {
             )
     },
 
-    getShowById(user, showId) {
-        return fetch(`${config.API_ENDPOINT}/shows/get/${user}/${showId}`)
+    getShowById(showId) {
+        return fetch(`${config.API_ENDPOINT}/shows/${showId}`, {
+            headers: {
+                'Authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
             .then(res => 
                 (!res.ok)
                     ? res.json().then(e => Promise.reject(e))
@@ -65,6 +73,15 @@ const ShowsApiService = {
                 'Authorization': `bearer ${TokenService.getAuthToken()}`,
             },
         })
+    },
+
+    getShowsPublic(user) {
+        return fetch(`${config.API_ENDPOINT}/users/${user}/public/shows`)
+            .then(res => 
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
     }
 
 }

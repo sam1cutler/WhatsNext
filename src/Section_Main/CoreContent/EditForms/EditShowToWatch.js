@@ -2,18 +2,14 @@ import { useState, useEffect } from 'react';
 import { useHistory, useParams, Link } from 'react-router-dom';
 import './EditShowToWatch.css';
 import ShowsApiService from '../../../services/shows-api-service';
-import TokenService from '../../../services/token-service';
+//import TokenService from '../../../services/token-service';
 
 function EditShowToWatch() {
 
     /*-- declare necessary hook features --*/
-    const [ activeShow, setActiveShow ] = useState( {
-        service: 'Hulu'
-    } );
+    const [ activeShow, setActiveShow ] = useState( {} );
     const history = useHistory();
     const { showId } = useParams();
-
-    //console.log(activeShow)
 
     /*-- handler function for EDIT SHOW submissions --*/
     function handleEditShowFormSubmission(e) {
@@ -67,9 +63,9 @@ function EditShowToWatch() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
-        const activeUser = TokenService.getUserId();
+        //const activeUser = TokenService.getUserId();
 
-        ShowsApiService.getShowById(activeUser, showId)
+        ShowsApiService.getShowById(showId)
             .then( showResult => {
                 setActiveShow(showResult)
             })
@@ -78,8 +74,6 @@ function EditShowToWatch() {
 
     // destructure relevant values from API-obtained, state-stored show info
     const { title, service, genre } = activeShow || '';
-    console.log(service)
-    console.log(genre)
 
     return (
 
