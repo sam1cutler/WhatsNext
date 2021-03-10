@@ -69,6 +69,8 @@ function EditShowWatched() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
+        console.log('attempting fetch')
+
         //const activeUser = TokenService.getUserId();
 
         ShowsApiService.getShowById(showId)
@@ -79,30 +81,28 @@ function EditShowWatched() {
     }, [showId] )
 
     // destructure relevant values from API-obtained, state-stored show info
-    const { title, service, genre, month, year } = activeShow || '';
+    const { title, service, genre, rating, completed } = activeShow || '';
 
-    /*
-    // further destructure month/year from completed date:
-    function splitDate(inputDate) {
-        let dateSplit = [];
-        if (inputDate) {
-            const interimDate = new Date(completed);
-            const finalDate = format(interimDate, 'MMM yyyy');
-            dateSplit = finalDate.split(' ');
-        }
-        return dateSplit;
+    //console.log(activeShow)
+    console.log(completed)
+
+
+    // destructure month and year from date
+    let month = '';
+    let year = '';
+
+    if (completed) {
+        year = completed.slice(0, 4);
+        month = completed.slice(5,7);
     }
 
-    const monthYear = splitDate(completed);
-    */
-    
-    
-    
+    console.log(year)
+    console.log(month)
 
     return (
 
         <main className='edit-show-container'>
-            <h2>Add a show to your Log of Watched Shows</h2>
+            <h2>Edit info about an already-watched show:</h2>
             <form 
                 className='edit-show-form'
                 onSubmit={handleEditShowFormSubmission}
@@ -125,7 +125,7 @@ function EditShowWatched() {
                 </div>
                 <div className='edit-show-section'>
                     <label htmlFor='genre'>Genre:</label><br />
-                    <select name='genre' id='genre' key={genre}>
+                    <select name='genre' id='genre' defaultValue={genre} key={genre}>
                         <option value='Drama'>Drama</option>
                         <option value='Comedy'>Comedy</option>
                         <option value='Documentary'>Documentary</option>
@@ -171,7 +171,7 @@ function EditShowWatched() {
                 </div>
                 <div className='edit-show-section'>
                     <label htmlFor='rating'>Rating:</label><br />
-                    <select name='rating' id='rating'>
+                    <select name='rating' id='rating' defaultValue={rating} key={rating}>
                         <option value='1'>1⭐️</option>
                         <option value='2'>2⭐️</option>
                         <option value='3'>3⭐️</option>

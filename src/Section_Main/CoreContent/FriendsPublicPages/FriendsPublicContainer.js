@@ -40,11 +40,15 @@ function FriendsPublicContainer() {
             })
     }, [friendId] )
 
+    //const relevantInfo = friendInfo;
+    friendInfo['connectionId'] = connectionId;
+
+
+
     return (
         <main className='friends-section-container'>
             <HeaderFriendPages 
                 friend={friendInfo}
-                connectionId={connectionId}
             />
             <div className='friends-content-container'>
                 {renderCoreFriendContent()}

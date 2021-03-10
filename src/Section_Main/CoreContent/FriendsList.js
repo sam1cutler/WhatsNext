@@ -15,7 +15,7 @@ function renderFriendsList(friendsList) {
         return (
             <Link
                 key={i}
-                to={`/friends/${activeFriend.id}/${activeFriend.recipient_id}`}
+                to={`/friends/${activeFriend.id}/${activeFriend.recipient_id}/watch-list`}
             >
                 <FriendCard 
                     friendInfo={activeFriend}

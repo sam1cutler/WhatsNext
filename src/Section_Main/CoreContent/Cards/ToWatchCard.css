@@ -3,12 +3,13 @@
     flex-direction: column;
     margin: 5% 0; 
 
+    /*
     background-color: rgb(206, 207, 207);
+    */
     
     /*
     border: solid 1px black;
     border-radius: 3px;
-    background-color: rgb(223, 225, 240);
     box-shadow: 0 0 6px grey;
     */
 }
@@ -28,7 +29,10 @@
     justify-content: center;
     margin: 0;
     width: 20%;
+
+    /*
     background-color: rgb(208, 226, 226);
+    */
 }
 
 .service-logo {
@@ -44,7 +48,9 @@
     margin: 0;
     padding: 2% 3%;
     width: 55%;
+    /*
     background-color: rgb(214, 226, 208);
+    */
 }
 
 .show-title-div {
@@ -65,7 +71,9 @@
     justify-content: space-between;
     margin: 0;
     width: 25%;
+    /*
     background-color: rgb(224, 226, 208);
+    */
 }
 
 .show-card-button {

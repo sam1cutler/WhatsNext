@@ -1,11 +1,12 @@
 .friend-page-header-container {
     width: 94%;
     position: fixed;
-    top: 17%;
+    top: 28%;
     left: 3%;
-    bottom: 73%;
+    bottom: 62%;
     overflow: auto;
     background-color: rgb(150, 170, 158);
+    z-index: 2;
 }
 
 .friend-header-upper {

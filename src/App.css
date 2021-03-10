@@ -15,13 +15,12 @@
 }
 
 header {
-  
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 25%;
+  height: 18%;
   overflow: auto;
 }
 
@@ -29,7 +28,7 @@ main {
   padding: 3%;
   width: 100%;
   position: fixed;
-  top: 25%;
+  top: 18%;
   left: 0;
   bottom: 0;
   overflow: auto;
@@ -59,12 +58,12 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0;
   padding: 1% 3%;
   height: 60%;
   background-color: rgb(255, 255, 255);
-  border-bottom: solid 1px grey;
+  
 }
 
 .nav-button {
@@ -74,7 +73,7 @@ main {
   justify-content: center;
   text-align: center;
   margin: 0;
-  padding: 2%;
+  
   height: 80%;
   width: 31%;
   /*

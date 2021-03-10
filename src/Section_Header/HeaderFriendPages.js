@@ -3,8 +3,7 @@ import './HeaderFriendPages.css';
 
 function HeaderFriendPages(props) {
 
-    const { id, display_name} = props.friend;
-    const { connectionId } = props.connectionId;
+    const { id, display_name, connectionId} = props.friend;
 
     return (
         <div className='friend-page-header-container'>

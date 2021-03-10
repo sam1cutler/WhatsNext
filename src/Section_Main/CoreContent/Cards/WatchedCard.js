@@ -1,43 +1,80 @@
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import './WatchedCard.css';
+import { RiEdit2Line } from 'react-icons/ri';
+import { BsFillStarFill, BsStar } from 'react-icons/bs';
+import logoNetflix from '../../../images/Netflix_Logo_CMYK.png';
+import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
+import logoDisney from '../../../images/disney.svg'
+import logoHbo from '../../../images/hboMax.png'
+import logoPrime from '../../../images/prime2.svg'
+
+
+/*
+function renderStarRating(rating) {
+    let finalRating = '';
+
+    for (let i=0 ; i<rating ; i++) {
+        finalRating += '<BsFillStarFill />'
+    }
+
+    for (let i=rating ; i<5 ; i++) {
+        finalRating += '<BsStar />'
+    }
+
+    return finalRating;
+}
+*/
+
 
 function WatchedCard(props) {
 
-    const { id, title, service, genre, completed, rating } = props.cardInfo;
+    const { id, title, service, genre, completed } = props.cardInfo;
 
     const interimDate = new Date(completed);
     const finalDate = format(interimDate, 'MMM yyyy');
 
-    return (
-        <div className='watched-show-card'>
-            <div className='watched-card-half'>
-                <div>
-                    {service}
-                </div>
-                <div>
-                    {title}
-                </div>
-                <div>
-                    {genre}
-                </div>
-            </div>
+    const logos = {
+        'Netflix': logoNetflix,
+        'Hulu': logoHulu,
+        'Disney': logoDisney,
+        'HBOMax': logoHbo,
+        'Amazon Prime': logoPrime
+    }
 
-            <div className='watched-card-half'>
-                <div>
-                    {finalDate}
+    //const starRating = renderStarRating(rating);
+
+    return (
+
+        <div className='watched-show-card'>
+
+            <div className='watched-card-content'>
+                <div className='show-card-logo-div'>
+                    <img src={logos[service]} className='service-logo' alt={`logo - ${service}`}/>
                 </div>
-                <div>
-                    {rating}⭐️
-                </div>
-                <Link
-                    to={`/watched-log/edit-show/${id}`}
-                    className='show-card-button'
-                >
-                    <div >
-                        Edit
+
+                <div className='show-card-content-div'>
+                    <div className='show-title-div show-card-main-info-half'>
+                        <b>{title} (<BsFillStarFill /><BsFillStarFill /><BsFillStarFill /><BsStar /><BsStar />) </b>
                     </div>
-                </Link>
+                    <div className='show-card-main-info-half'>
+                        {genre}
+                    </div>
+                </div>
+
+                <div className='show-card-buttons-div'>
+                    <div className='watched-date-container'>
+                        {finalDate}
+                    </div>
+                    <Link
+                        to={`/watched-log/edit-show/${id}`}
+                        className='show-card-button'
+                    >
+                        <div >
+                            <RiEdit2Line />
+                        </div>
+                    </Link>
+                </div>
             </div>
         </div>
     )

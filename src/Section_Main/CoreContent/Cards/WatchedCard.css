@@ -1,18 +1,16 @@
 .watched-show-card {
     display: flex;
     flex-direction: column;
-    margin: 5% 2%; 
-    padding: 2%;
-    border: solid 1px black;
-    border-radius: 3px;
-    background-color: rgb(223, 225, 240);
-    box-shadow: 0 0 6px grey;
+    margin: 5% 0; 
 }
 
-.watched-card-half {
+.watched-card-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin: 5px;
+    justify-content: space-between;
+}
+
+.watched-date-container {
+    text-align: center;
 }
