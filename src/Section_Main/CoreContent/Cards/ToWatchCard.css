@@ -7,11 +7,10 @@
     background-color: rgb(206, 207, 207);
     */
     
-    /*
-    border: solid 1px black;
-    border-radius: 3px;
+    background-color: rgb(255, 255, 255, 0.8);
+    border: solid 1px rgb(136, 136, 136);
+    border-radius: 5px;
     box-shadow: 0 0 6px grey;
-    */
 }
 
 /*-- ~~ Main card content ~~ --*/
@@ -85,13 +84,14 @@
     font-size: 2rem;
     text-align: center;
     border: none;
-    background-color: white;
+    background-color: rgb(255, 255, 255, 0);
     /*
     border: 1px solid black;
     border-radius: 3px;
     background-color: white;
     */
 }
+
 
 /*
 .to-watch-show-card-top-half {

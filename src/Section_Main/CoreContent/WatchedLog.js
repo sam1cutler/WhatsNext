@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import WatchedCard from './Cards/WatchedCard';
-import './WatchedLog.css'
+import './WatchedLog.css';
+import { FaPlus } from 'react-icons/fa';
 import ShowsApiService from '../../services/shows-api-service';
 import TokenService from '../../services/token-service';
 
@@ -77,7 +78,7 @@ function WatchedLog() {
                 to='/watched-log/add-show'    
             >
                 <div className='add-button'>
-                    Add show
+                    <FaPlus />
                 </div>
             </NavLink>
 

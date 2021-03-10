@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import ToWatchCard from './Cards/ToWatchCard';
 import './WatchList.css';
+import { FaPlus } from 'react-icons/fa';
 import ShowsApiService from '../../services/shows-api-service';
 import TokenService from '../../services/token-service';
 
@@ -76,7 +77,7 @@ function WatchList() {
                 to='/watch-list/add-show'    
             >
                 <div className='add-button'>
-                Add show
+                    <FaPlus />
                 </div>
             </NavLink>
 

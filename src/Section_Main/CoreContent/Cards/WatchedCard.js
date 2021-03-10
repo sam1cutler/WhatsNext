@@ -8,7 +8,23 @@ import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
 import logoDisney from '../../../images/disney.svg'
 import logoHbo from '../../../images/hboMax.png'
 import logoPrime from '../../../images/prime2.svg'
+import logoApple from '../../../images/appleTv.svg'
 
+
+function renderStarRating(rating) {
+
+    const stars = [0, 0, 0, 0, 0].map((_, i) =>
+        (i < rating)
+            ? <span key={i}><BsFillStarFill /></span>
+            : <span key={i}><BsStar /></span>
+    );
+    return (
+        <div className='rating-div show-card-main-info-half'>
+            {stars}
+        </div>
+    );
+
+}
 
 /*
 function renderStarRating(rating) {
@@ -29,7 +45,7 @@ function renderStarRating(rating) {
 
 function WatchedCard(props) {
 
-    const { id, title, service, genre, completed } = props.cardInfo;
+    const { id, title, service, genre, completed, rating } = props.cardInfo;
 
     const interimDate = new Date(completed);
     const finalDate = format(interimDate, 'MMM yyyy');
@@ -39,10 +55,11 @@ function WatchedCard(props) {
         'Hulu': logoHulu,
         'Disney': logoDisney,
         'HBOMax': logoHbo,
-        'Amazon Prime': logoPrime
+        'Amazon Prime': logoPrime,
+        'Apple TV': logoApple
     }
 
-    //const starRating = renderStarRating(rating);
+    const starRating = renderStarRating(rating);
 
     return (
 
@@ -55,8 +72,9 @@ function WatchedCard(props) {
 
                 <div className='show-card-content-div'>
                     <div className='show-title-div show-card-main-info-half'>
-                        <b>{title} (<BsFillStarFill /><BsFillStarFill /><BsFillStarFill /><BsStar /><BsStar />) </b>
+                        <b>{title}</b>
                     </div>
+                    {starRating}
                     <div className='show-card-main-info-half'>
                         {genre}
                     </div>

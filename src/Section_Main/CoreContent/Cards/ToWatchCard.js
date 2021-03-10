@@ -10,9 +10,7 @@ import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
 import logoDisney from '../../../images/disney.svg'
 import logoHbo from '../../../images/hboMax.png'
 import logoPrime from '../../../images/prime2.svg'
-
-
-
+import logoApple from '../../../images/appleTv.svg'
 
 function ToWatchCard(props) {
 
@@ -26,7 +24,8 @@ function ToWatchCard(props) {
         'Hulu': logoHulu,
         'Disney': logoDisney,
         'HBOMax': logoHbo,
-        'Amazon Prime': logoPrime
+        'Amazon Prime': logoPrime,
+        'Apple TV': logoApple
     }
 
     /*-- handler function for SUBMITTING "Finished" from --*/

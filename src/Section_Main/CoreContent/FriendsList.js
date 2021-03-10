@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import FriendCard from './Cards/FriendCard';
 import './FriendsList.css';
+import { FaPlus } from 'react-icons/fa';
 import FriendsApiService from '../../services/friends-api-service';
 //import TokenService from '../../services/token-service';
 
@@ -50,7 +51,7 @@ function FriendsList() {
                 to='/friends/add-friend'    
             >
                 <div className='add-button'>
-                    Add friend
+                    <FaPlus />
                 </div>
             </Link>
 
