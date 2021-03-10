@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { format } from 'date-fns';
 import './WatchedCard.css';
+import cardHelpers from './cardHelpers';
 import { RiEdit2Line } from 'react-icons/ri';
-import { BsFillStarFill, BsStar } from 'react-icons/bs';
 import logoNetflix from '../../../images/Netflix_Logo_CMYK.png';
 import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
 import logoDisney from '../../../images/disney.svg'
@@ -11,20 +11,6 @@ import logoPrime from '../../../images/prime2.svg'
 import logoApple from '../../../images/appleTv.svg'
 
 
-function renderStarRating(rating) {
-
-    const stars = [0, 0, 0, 0, 0].map((_, i) =>
-        (i < rating)
-            ? <span key={i}><BsFillStarFill /></span>
-            : <span key={i}><BsStar /></span>
-    );
-    return (
-        <div className='rating-div show-card-main-info-half'>
-            {stars}
-        </div>
-    );
-
-}
 
 /*
 function renderStarRating(rating) {
@@ -59,7 +45,7 @@ function WatchedCard(props) {
         'Apple TV': logoApple
     }
 
-    const starRating = renderStarRating(rating);
+    const starRating = cardHelpers.renderStarRating(rating);
 
     return (
 

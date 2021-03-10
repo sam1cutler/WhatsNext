@@ -12,7 +12,7 @@ import FriendsApiService from '../../../services/friends-api-service';
 function renderCoreFriendContent() {
 
     return (
-        <>
+        <div className='friends-content-container'>
             <Route 
                 path='/friends/:connectionId/:friendId/watch-list'
                 exact
@@ -23,7 +23,7 @@ function renderCoreFriendContent() {
                 exact
                 component={PublicWatchedLog}
             />
-        </>
+        </div>
     )
 }
 
@@ -50,9 +50,7 @@ function FriendsPublicContainer() {
             <HeaderFriendPages 
                 friend={friendInfo}
             />
-            <div className='friends-content-container'>
-                {renderCoreFriendContent()}
-            </div>
+            {renderCoreFriendContent()}
         </main>
     )
 

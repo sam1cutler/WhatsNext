@@ -69,8 +69,6 @@ function EditShowWatched() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
-        console.log('attempting fetch')
-
         //const activeUser = TokenService.getUserId();
 
         ShowsApiService.getShowById(showId)
@@ -83,9 +81,6 @@ function EditShowWatched() {
     // destructure relevant values from API-obtained, state-stored show info
     const { title, service, genre, rating, completed } = activeShow || '';
 
-    //console.log(activeShow)
-    console.log(completed)
-
 
     // destructure month and year from date
     let month = '';
@@ -96,13 +91,10 @@ function EditShowWatched() {
         month = completed.slice(5,7);
     }
 
-    console.log(year)
-    console.log(month)
-
     return (
 
         <main className='edit-show-container'>
-            <h2>Edit info about an already-watched show:</h2>
+            <h2>Edit info about {title}:</h2>
             <form 
                 className='edit-show-form'
                 onSubmit={handleEditShowFormSubmission}

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './PublicWatchList.css';
 import ShowsApiService from '../../../services/shows-api-service';
-import ToWatchCardPublic from './ToWatchCardPublic';
+import ToWatchCardPublic from '../Cards/ToWatchCardPublic';
 
 function refineShowList(showList) {
 

@@ -13,8 +13,6 @@ function EditShowToWatch() {
 
     /*-- handler function for EDIT SHOW submissions --*/
     function handleEditShowFormSubmission(e) {
-
-        console.log('editing a show')
         
         e.preventDefault();
 
@@ -78,7 +76,7 @@ function EditShowToWatch() {
     return (
 
         <main className='edit-show-container'>
-            <h2>Edit a show on your Watch List</h2>
+            <h2>Edit info about {title}:</h2>
             <form 
                 className='edit-show-form'
                 onSubmit={handleEditShowFormSubmission}

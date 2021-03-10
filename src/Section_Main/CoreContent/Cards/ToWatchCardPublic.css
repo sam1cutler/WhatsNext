@@ -1,30 +1,31 @@
-.watched-show-card-public {
+.to-watch-show-card-public {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     margin: 5% 2%; 
     padding: 2%;
     border: solid 1px black;
     border-radius: 3px;
-    background-color: rgb(223, 225, 240);
+    background-color: rgb(255, 255, 255, 0.8);
     box-shadow: 0 0 6px grey;
 }
 
-.watched-card-public-half {
+.show-card-logo-div-public {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    margin: 5px;
+    justify-content: center;
+    margin: 0;
+    width: 22%;
 }
 
-.watched-show-card-content-div-public {
+.show-card-content-div-public {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     margin: 0;
     padding: 2% 3%;
-    width: 80%;
+    width: 78%;
     /*
     background-color: rgb(214, 226, 208);
     */

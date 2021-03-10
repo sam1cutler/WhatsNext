@@ -19,3 +19,23 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: 'NickelodeonNF';
+  src: local('NickelodeonNF'), 
+    url('./fonts/NickelodeonNF.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'StarTrekEnterpriseFuture';
+  src: local('StarTrekEnterpriseFuture'), 
+    url('./fonts/StarTrekEnterpriseFuture.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Adventure';
+  src: local('Adventure'), 
+    url('./fonts/Adventure.ttf') format('truetype');
+  font-weight: normal;
+}

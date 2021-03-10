@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { FaUserFriends } from 'react-icons/fa';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { AiOutlineCheckSquare } from 'react-icons/ai';
+import { GrLogout } from 'react-icons/gr';
 import './HeaderRegisteredUser.css';
 import TokenService from '../services/token-service';
 
@@ -25,11 +26,11 @@ function HeaderRegisteredUser() {
                         className='header-link-container'
                         onClick={handleLogout}
                     >
-                        <p>Logout</p>
+                        <p><GrLogout /></p>
                     </NavLink>
                 </div>
             </div>
-            <div className='header-lower'>
+            <div className='header-lower header-lower-registered'>
                 <NavLink
                     to='/watched-log'
                     className='nav-button'

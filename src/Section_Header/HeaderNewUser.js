@@ -35,7 +35,7 @@ function HeaderNewUser() {
                 </div>
                 
             </div>
-            <div className='header-lower'>
+            <div className='header-lower header-lower-new'>
                 <NavLink
                     to='/signup'
                     className='nav-button'

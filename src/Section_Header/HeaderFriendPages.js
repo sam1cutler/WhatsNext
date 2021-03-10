@@ -12,7 +12,7 @@ function HeaderFriendPages(props) {
         <div className='friend-page-header-container'>
             <div className='friend-header-upper'>
                 <div className='header-component friend-name-container'>
-                    {display_name}
+                    <b><i>{display_name}</i></b>
                 </div>
             </div>
             <div className='friend-header-lower'>
