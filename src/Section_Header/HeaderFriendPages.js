@@ -1,5 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import './HeaderFriendPages.css';
+import { FiArrowRightCircle } from 'react-icons/fi';
+import { AiOutlineCheckSquare } from 'react-icons/ai';
+
 
 function HeaderFriendPages(props) {
 
@@ -8,10 +11,8 @@ function HeaderFriendPages(props) {
     return (
         <div className='friend-page-header-container'>
             <div className='friend-header-upper'>
-                <div className='header-component'>
-                    <div>
-                        {display_name}
-                    </div>
+                <div className='header-component friend-name-container'>
+                    {display_name}
                 </div>
             </div>
             <div className='friend-header-lower'>
@@ -19,13 +20,13 @@ function HeaderFriendPages(props) {
                     to={`/friends/${connectionId}/${id}/watched-log`}
                     className='nav-button'
                 >
-                    WATCHED
+                    <AiOutlineCheckSquare />
                 </NavLink>
                 <NavLink
                     to={`/friends/${connectionId}/${id}/watch-list`}
                     className='nav-button'
                 >
-                    TO-WATCH
+                    <FiArrowRightCircle />
                 </NavLink>
             </div>
         </div>

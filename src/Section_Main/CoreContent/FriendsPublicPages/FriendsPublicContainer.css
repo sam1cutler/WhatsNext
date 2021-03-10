@@ -1,12 +1,23 @@
+/*
+.friends-section-container {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 grey;
+    position: fixed; 
+    top: 21%;
+    bottom: 3%;
+}
+*/
+
 .friends-content-container {
     padding: 3%;
     width: 94%;
     position: fixed;
-    top: 38%;
+    top: 33%;
     left: 3%;
     bottom: 3%;
     overflow: auto;
-    background-color: rgb(206, 206, 206)
+    background-color: white;
 }
 
 .get-big {

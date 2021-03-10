@@ -46,7 +46,7 @@ function FriendsPublicContainer() {
 
 
     return (
-        <main className='friends-section-container'>
+        <main>
             <HeaderFriendPages 
                 friend={friendInfo}
             />
