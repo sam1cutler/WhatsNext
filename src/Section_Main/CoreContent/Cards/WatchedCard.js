@@ -40,7 +40,7 @@ function WatchedCard(props) {
         'Netflix': logoNetflix,
         'Hulu': logoHulu,
         'Disney': logoDisney,
-        'HBOMax': logoHbo,
+        'HBO Max': logoHbo,
         'Amazon Prime': logoPrime,
         'Apple TV': logoApple
     }

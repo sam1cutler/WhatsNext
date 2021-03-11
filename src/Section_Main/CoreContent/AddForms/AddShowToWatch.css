@@ -1,6 +1,5 @@
 .add-show-container {
     padding: 10% 2%;
-    width: 98vw;
     text-align: center;
 }
 
@@ -25,4 +24,22 @@
     box-shadow: 0 0 7px grey;
     background-color: rgb(182, 195, 196);
 }
-  
+
+@media all and (min-width: 700px) {
+    .add-show-container {
+        padding: 5% 0;
+    }
+
+    .add-show-section {
+        margin: 1%;
+        padding: 0;   
+    }
+
+    .add-show-section p {
+        margin: 25px 0 0 0;
+    }
+
+    .add-show-button {
+        padding: 1%;
+    }
+}

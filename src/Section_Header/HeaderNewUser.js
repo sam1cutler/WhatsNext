@@ -10,7 +10,7 @@ function HeaderNewUser() {
     function handleEnterDemoMode() {
 
         AuthApiService.postLogin({
-            email: 'jeremy@gmail.com',
+            email: 'hermes@gmail.com',
             password: 'gH4$gH4$'
         })
             .then(res => {

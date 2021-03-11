@@ -46,3 +46,41 @@
 .friend-name-container {
     font-size: 1.2rem;
 }
+
+@media all and (min-width: 700px) {
+    
+    .friend-page-header-container {
+        left: 25%;
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .friend-header-upper {
+        width: 60%;
+        height: 100%;
+        box-shadow: none;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    .friend-header-lower {
+        height: 100%;
+        width: 40%;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .friend-name-container {
+        margin: 0 0 5% 10%;
+        font-size: 3rem;
+    }
+
+    .friend-nav-button {
+        height: 60px;
+        width: 60px;
+        margin: 6% 5%;
+    }
+    
+}

@@ -108,7 +108,7 @@ function EditShowWatched() {
                     <select name='service' id='service' defaultValue={service} key={service}>
                         <option value='Netflix'>Netflix</option>
                         <option value='Hulu'>Hulu</option>
-                        <option value='HBOMax'>HBOMax</option>
+                        <option value='HBO Max'>HBO Max</option>
                         <option value='Amazon Prime'>Amazon Prime</option>
                         <option value='Disney'>Disney+</option>
                         <option value='other'>Other</option>

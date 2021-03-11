@@ -20,4 +20,12 @@
     background-color: rgb(176, 214, 214);
     font-size: 2rem;
 }
-  
+
+@media all and (min-width: 700px) {
+
+    .add-button {
+        bottom: 6%;
+        right: 17%;  
+    }
+
+}

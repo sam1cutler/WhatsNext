@@ -19,3 +19,12 @@
     margin: 15px;
     font-size: 20pt;
 }
+
+@media all and (min-width: 700px) {
+    
+    .friends-content-container {
+        left: 25%;
+        width: 60%;
+    }
+    
+}

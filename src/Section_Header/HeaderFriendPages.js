@@ -18,13 +18,13 @@ function HeaderFriendPages(props) {
             <div className='friend-header-lower'>
                 <NavLink
                     to={`/friends/${connectionId}/${id}/watched-log`}
-                    className='nav-button'
+                    className='nav-button friend-nav-button'
                 >
                     <AiOutlineCheckSquare />
                 </NavLink>
                 <NavLink
                     to={`/friends/${connectionId}/${id}/watch-list`}
-                    className='nav-button'
+                    className='nav-button friend-nav-button'
                 >
                     <FiArrowRightCircle />
                 </NavLink>

@@ -50,7 +50,7 @@ function AddShowToWatch() {
                     <select name='service' id='service'>
                         <option value='Netflix'>Netflix</option>
                         <option value='Hulu'>Hulu</option>
-                        <option value='HBOMax'>HBOMax</option>
+                        <option value='HBO Max'>HBO Max</option>
                         <option value='Amazon Prime'>Amazon Prime</option>
                         <option value='Disney'>Disney+</option>
                         <option value='other'>Other</option>
@@ -70,6 +70,7 @@ function AddShowToWatch() {
                         <option value='other'>Other</option>
                     </select>
                 </div>
+                {/*
                 <div className='add-show-section'>
                     <label htmlFor='priority'>Priority:</label><br />
                     <select name='priority' id='priority'>
@@ -78,6 +79,7 @@ function AddShowToWatch() {
                         <option value='bottom'>Bottom</option>
                     </select>
                 </div>
+                */}
                 <div className='add-show-section'>
                     <button type='submit' className='add-show-button'>Add show</button>
                 </div>

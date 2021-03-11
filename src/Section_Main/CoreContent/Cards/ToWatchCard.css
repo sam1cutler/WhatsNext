@@ -77,32 +77,7 @@
     text-align: center;
     border: none;
     background-color: rgb(255, 255, 255, 0);
-    /*
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: white;
-    */
 }
-
-
-/*
-.to-watch-show-card-top-half {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin: 5px;
-}
-
-.to-watch-show-card-bottom-half {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 5px;
-}
-*/
-
 
 /*-- ~~ Finished show review stuff ~~ --*/
 .finish-show-review-section {
@@ -161,14 +136,13 @@
     margin-top: 2%;
     background-color: rgb(255, 255, 255, 0.8);
     border: none;
-    /*
-    margin: 1%;
-    padding: 8%;
-    font-size: 1rem;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: rgb(218, 206, 209);
-    */
 }
 
+
+@media all and (min-width: 650px) {
+
+    .show-title-div {
+        font-size: 1.4rem;
+    }
+
+}

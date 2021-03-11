@@ -1,6 +1,5 @@
 .login-container {
     padding: 20% 2%;
-    width: 98vw;
 }
 
 .login-container h2 {
@@ -27,4 +26,12 @@
     border-radius: 4px;
     box-shadow: 0 0 7px grey;
     background-color: rgb(182, 195, 196);
+}
+
+@media all and (min-width: 700px) {
+    
+    .login-container {
+        padding: 5% 2%;
+    }
+    
 }
