@@ -4,6 +4,14 @@ import './PublicWatchedLog.css';
 import ShowsApiService from '../../../services/shows-api-service';
 import WatchedCardPublic from '../Cards/WatchedCardPublic';
 
+function orderShowList(showList) {
+    showList.sort( function(a, b) {
+        const c = new Date(a.completed);
+        const d = new Date(b.completed);
+        return d-c
+    })
+}
+
 function refineShowList(showList) {
 
     let refinedList = [];
@@ -14,7 +22,7 @@ function refineShowList(showList) {
         } 
     })
 
-    //orderShowList(refinedList);
+    orderShowList(refinedList);
 
     return refinedList;
 }

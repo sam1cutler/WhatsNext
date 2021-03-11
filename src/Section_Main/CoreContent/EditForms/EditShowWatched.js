@@ -106,13 +106,13 @@ function EditShowWatched() {
                 <div className='edit-show-section'>
                     <label htmlFor='service'>Streaming Service:</label><br />
                     <select name='service' id='service' defaultValue={service} key={service}>
-                        <option value='Netflix'>Netflix</option>
-                        <option value='Hulu'>Hulu</option>
-                        <option value='HBO Max'>HBO Max</option>
-                        <option value='Amazon Prime'>Amazon Prime</option>
-                        <option value='Disney'>Disney+</option>
+                        <option value='netflix'>Netflix</option>
+                        <option value='hulu'>Hulu</option>
+                        <option value='hbo'>HBO Max</option>
+                        <option value='amazon'>Amazon Prime</option>
+                        <option value='disney'>Disney+</option>
+                        <option value='apple'>Apple TV</option>
                         <option value='other'>Other</option>
-                        <option value='dont-know'>Don't know</option>
                     </select>
                 </div>
                 <div className='edit-show-section'>
@@ -120,10 +120,12 @@ function EditShowWatched() {
                     <select name='genre' id='genre' defaultValue={genre} key={genre}>
                         <option value='Drama'>Drama</option>
                         <option value='Comedy'>Comedy</option>
-                        <option value='Documentary'>Documentary</option>
                         <option value='SciFi'>SciFi</option>
                         <option value='Fantasy'>Fantasy</option>
                         <option value='Crime'>Crime</option>
+                        <option value='Cooking'>Cooking</option>
+                        <option value='Sports'>Sports</option>
+                        <option value='Documentary'>Documentary</option>
                         <option value='other'>Other</option>
                     </select>
                 </div>

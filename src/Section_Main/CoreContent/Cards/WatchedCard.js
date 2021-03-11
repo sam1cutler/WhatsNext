@@ -3,31 +3,7 @@ import { format } from 'date-fns';
 import './WatchedCard.css';
 import cardHelpers from './cardHelpers';
 import { RiEdit2Line } from 'react-icons/ri';
-import logoNetflix from '../../../images/Netflix_Logo_CMYK.png';
-import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
-import logoDisney from '../../../images/disney.svg'
-import logoHbo from '../../../images/hboMax.png'
-import logoPrime from '../../../images/prime2.svg'
-import logoApple from '../../../images/appleTv.svg'
-
-
-
-/*
-function renderStarRating(rating) {
-    let finalRating = '';
-
-    for (let i=0 ; i<rating ; i++) {
-        finalRating += '<BsFillStarFill />'
-    }
-
-    for (let i=rating ; i<5 ; i++) {
-        finalRating += '<BsStar />'
-    }
-
-    return finalRating;
-}
-*/
-
+import ServiceLogo from './ServiceLogo';
 
 function WatchedCard(props) {
 
@@ -36,15 +12,6 @@ function WatchedCard(props) {
     const interimDate = new Date(completed);
     const finalDate = format(interimDate, 'MMM yyyy');
 
-    const logos = {
-        'Netflix': logoNetflix,
-        'Hulu': logoHulu,
-        'Disney': logoDisney,
-        'HBO Max': logoHbo,
-        'Amazon Prime': logoPrime,
-        'Apple TV': logoApple
-    }
-
     const starRating = cardHelpers.renderStarRating(rating);
 
     return (
@@ -52,9 +19,9 @@ function WatchedCard(props) {
         <div className='watched-show-card'>
 
             <div className='watched-card-content'>
-                <div className='show-card-logo-div'>
-                    <img src={logos[service]} className='service-logo' alt={`logo - ${service}`}/>
-                </div>
+                <ServiceLogo 
+                    service={service}
+                />
 
                 <div className='show-card-content-div'>
                     <div className='show-title-div show-card-main-info-half'>

@@ -5,12 +5,7 @@ import './ToWatchCard.css';
 import { AiOutlineCheckSquare } from 'react-icons/ai';
 import { RiEdit2Line } from 'react-icons/ri';
 import { ImCancelCircle } from 'react-icons/im'
-import logoNetflix from '../../../images/Netflix_Logo_CMYK.png';
-import logoHulu from '../../../images/hulu-logo_green_rgb.svg'
-import logoDisney from '../../../images/disney.svg'
-import logoHbo from '../../../images/hboMax.png'
-import logoPrime from '../../../images/prime2.svg'
-import logoApple from '../../../images/appleTv.svg'
+import ServiceLogo from './ServiceLogo';
 
 function ToWatchCard(props) {
 
@@ -18,15 +13,6 @@ function ToWatchCard(props) {
     const history = useHistory();
 
     const { id, title, service, genre } = props.cardInfo;
-
-    const logos = {
-        'Netflix': logoNetflix,
-        'Hulu': logoHulu,
-        'Disney': logoDisney,
-        'HBO Max': logoHbo,
-        'Amazon Prime': logoPrime,
-        'Apple TV': logoApple
-    }
 
     /*-- handler function for SUBMITTING "Finished" from --*/
     function handleFinishedShowFormSubmission(e) {    
@@ -121,10 +107,9 @@ function ToWatchCard(props) {
         <div className='to-watch-show-card'>
 
             <div className='to-watch-card-content'>
-                <div className='show-card-logo-div'>
-                    <img src={logos[service]} className='service-logo' alt={`logo - ${service}`}/>
-                </div>
-
+                <ServiceLogo 
+                    service={service}
+                />
                 <div className='show-card-content-div'>
                     <div className='show-title-div show-card-main-info-half'>
                         <b>{title}</b>

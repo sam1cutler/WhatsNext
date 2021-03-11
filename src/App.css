@@ -11,7 +11,6 @@
   padding: 0;
   height: 100%;
   max-height: 100%;
-  overflow: hidden;
 }
 
 header {
@@ -74,14 +73,9 @@ main {
   justify-content: center;
   text-align: center;
   margin: 0;
-  
   height: 80%;
   width: 31%;
-  /*
-  border: 1px solid black;
-  */
   border-radius: 4px;
-  
   background-color: white;
 }
 
@@ -95,7 +89,7 @@ main {
 }
 
 h1 {
-  font-family: 'Adventure';
+  font-family: 'RocknRoll One', sans-serif;
   font-size: 2rem;
   margin: 0;
   text-align: left;
@@ -145,11 +139,27 @@ a {
 
 @media all and (min-width: 700px) {
 
+  .app-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('images/tiled_backdrop_horiz3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   header {
     top: 5%;
     height: 10%;
     left: 20%;
     width: 70%;
+    border: 1px solid grey;
+    
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 0 0 6px grey;
   }
 
   main {
@@ -157,6 +167,10 @@ a {
     left: 20%;
     width: 70%;
     padding-bottom: 10%;
+    background-color: rgb(224, 238, 238, 0.7);
+    border: 1px solid grey;
+    border-top: none;
+    box-shadow: 0 0 6px grey;
   }
 
   .header-upper {
@@ -178,6 +192,14 @@ a {
     height: 80px;
     width: 80px;
     border-radius: 60px;
+    border: 1px solid rgb(124, 124, 124);
+    box-shadow: 0 0 6px rgb(61, 61, 61);
+    
+  }
+
+  .header-lower .active {
+    box-shadow: 0 0 12px rgb(61, 61, 61);
+    border: 2px solid rgb(124, 124, 124);
   }
 
 }

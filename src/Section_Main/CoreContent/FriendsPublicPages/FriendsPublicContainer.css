@@ -6,7 +6,7 @@
     left: 3%;
     bottom: 3%;
     overflow: auto;
-    background-color: rgb(224, 238, 238);
+    background-color: rgb(224, 238, 238, 0.6);
     border-bottom: 1px solid grey;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
