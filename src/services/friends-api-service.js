@@ -15,6 +15,7 @@ const FriendsApiService = {
                     : res.json()
             )
     },
+
     getUserInfo(user) {
         return fetch(`${config.API_ENDPOINT}/users/${user}/public/info`, {
             headers: {
@@ -27,6 +28,7 @@ const FriendsApiService = {
                     : res.json()
             )
     },
+
     addFriendConnection(targetFriendEmail) {
         return fetch(`${config.API_ENDPOINT}/friends`, {
             method: 'POST',
@@ -42,6 +44,7 @@ const FriendsApiService = {
                 }
             })
     },
+
     deleteFriendConnection(connection) {
         return fetch(`${config.API_ENDPOINT}/friends/${connection}`, {
             method: 'DELETE',
@@ -50,7 +53,6 @@ const FriendsApiService = {
                 'Authorization': `bearer ${TokenService.getAuthToken()}`,
             },
         })
-
     }
 
 }

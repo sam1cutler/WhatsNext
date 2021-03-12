@@ -4,7 +4,6 @@ import ToWatchCard from './Cards/ToWatchCard';
 import './WatchList.css';
 import { FaPlus } from 'react-icons/fa';
 import ShowsApiService from '../../services/shows-api-service';
-//import tvEmoji from '../../images/television3.png';
 
 
 function refineShowList(showList) {
@@ -44,15 +43,11 @@ function renderWelcome() {
             <div className='add-show-pointer'>
                 ➞
             </div>
-            
         </div>
     )
-
 }
 
 function WatchList() {
-
-    
     
     // establish showList for component's state
     const [ showList, setShowList ] = useState( [] );
@@ -67,7 +62,6 @@ function WatchList() {
             })
     }, [] )
     
-
     // Render either showListDisplay or a welcome message
     const showListDisplay = 
         (showList.length > 0)
@@ -76,9 +70,7 @@ function WatchList() {
 
     return (
         <main className='show-list-container'>
-
             {showListDisplay}
-
             <NavLink 
                 to='/watch-list/add-show'    
             >
@@ -89,7 +81,6 @@ function WatchList() {
 
         </main>
     )
-
 }
 
 export default WatchList;

@@ -11,7 +11,6 @@ function ToWatchCardPublic(props) {
             <ServiceLogo 
                 service={service}
             />
-
             <div className='show-card-content-div-public'>
                 <div className='show-title-div show-card-main-info-half'>
                     <b>{title}</b>
@@ -21,9 +20,7 @@ function ToWatchCardPublic(props) {
                 </div>
             </div>
         </div>
-
     )
-
 }
 
 export default ToWatchCardPublic;

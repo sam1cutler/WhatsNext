@@ -5,8 +5,6 @@ import './FriendsList.css';
 import { FaPlus } from 'react-icons/fa';
 import FriendsApiService from '../../services/friends-api-service';
 
-
-
 function renderFriendsList(friendsList) {
 
     return friendsList.map( (activeFriend, i) => {
@@ -18,15 +16,12 @@ function renderFriendsList(friendsList) {
                 <FriendCard 
                     friendInfo={activeFriend}
                 />
-            </Link>
-            
+            </Link>    
         )
     })
-    
 }
 
 function renderWelcome() {
-
     return (
         <div className='watch-list-welcome-message form-backing'>
             <h2>You don't have any friend connections yet!</h2>
@@ -35,11 +30,9 @@ function renderWelcome() {
             </div>
             <div className='add-show-pointer'>
                 ➞
-            </div>
-            
+            </div>      
         </div>
     )
-
 }
 
 function FriendsList() {
@@ -47,10 +40,12 @@ function FriendsList() {
     const [ friendsList, setFriendsList ] = useState( [] );
 
     useEffect( () => {
+
         FriendsApiService.getFriends()
             .then(friendsList => {
                 setFriendsList(friendsList);
             })
+
     }, [] )
 
     // Render either showListDisplay or a welcome message
@@ -59,12 +54,9 @@ function FriendsList() {
             ? renderFriendsList(friendsList)
             : renderWelcome()
 
-    return(
-
+    return (
         <main className='friends-list-container'>
-            
             {friendsListDisplay}
-
             <Link 
                 to='/friends/add-friend'    
             >
@@ -72,11 +64,8 @@ function FriendsList() {
                     <FaPlus />
                 </div>
             </Link>
-
         </main>
-
     )
-
 }
 
 export default FriendsList;

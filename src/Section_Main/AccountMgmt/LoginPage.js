@@ -32,9 +32,6 @@ function LoginPage() {
     
                 // save authToken in the browser
                 TokenService.saveAuthToken(res.authToken)
-                
-                // save user's ID in the browser...
-                TokenService.saveUserId(res.user_id)
     
                 // push to proper "logged in" welcome page
                 history.push({

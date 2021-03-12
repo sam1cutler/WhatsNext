@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, Route } from 'react-router-dom';
 import './FriendsPublicContainer.css';
-
 import HeaderFriendPages from '../../../Section_Header/HeaderFriendPages';
 import PublicWatchList from './PublicWatchList';
 import PublicWatchedLog from './PublicWatchedLog';
-
 import FriendsApiService from '../../../services/friends-api-service';
 
 function FriendsPublicContainer() {
@@ -33,16 +31,16 @@ function FriendsPublicContainer() {
     
     // API call to /users endpoint to get friend info for header
     useEffect( () => {
+
         FriendsApiService.getUserInfo(friendId)
             .then( friend => {
                 setFriendInfo(friend)
             })
+
     }, [friendId] )
 
     //const relevantInfo = friendInfo;
     friendInfo['connectionId'] = connectionId;
-
-
 
     return (
         <main>
@@ -52,7 +50,6 @@ function FriendsPublicContainer() {
             {renderCoreFriendContent()}
         </main>
     )
-
 }
 
 export default FriendsPublicContainer;

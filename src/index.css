@@ -1,7 +1,6 @@
 body {
   font-family: 'Source Sans pro', sans-serif;
   font-size: 16px;
-  /* 1 rem = 16px */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(203, 216, 216);
@@ -15,25 +14,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-@font-face {
-  font-family: 'NickelodeonNF';
-  src: local('NickelodeonNF'), 
-    url('./fonts/NickelodeonNF.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'StarTrekEnterpriseFuture';
-  src: local('StarTrekEnterpriseFuture'), 
-    url('./fonts/StarTrekEnterpriseFuture.ttf') format('truetype');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Adventure';
-  src: local('Adventure'), 
-    url('./fonts/Adventure.ttf') format('truetype');
-  font-weight: normal;
 }

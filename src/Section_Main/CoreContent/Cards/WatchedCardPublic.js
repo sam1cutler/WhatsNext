@@ -20,7 +20,6 @@ function WatchedCardPublic(props) {
                 <ServiceLogo 
                     service={service}
                 />
-
                 <div className='watched-show-card-content-div-public'>
                     <div className='show-title-div show-card-main-info-half'>
                         <b>{title}</b>
@@ -30,7 +29,6 @@ function WatchedCardPublic(props) {
                         {genre}
                     </div>
                 </div>
-
                 <div className='show-card-buttons-div'>
                     <div className='watched-date-container'>
                         {finalDate}
@@ -39,7 +37,6 @@ function WatchedCardPublic(props) {
             </div>
         </div>
     )
-
 }
 
 export default WatchedCardPublic;

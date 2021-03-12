@@ -68,8 +68,6 @@ function EditShowWatched() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
-        //const activeUser = TokenService.getUserId();
-
         ShowsApiService.getShowById(showId)
             .then( showResult => {
                 setActiveShow(showResult)
@@ -79,7 +77,6 @@ function EditShowWatched() {
 
     // destructure relevant values from API-obtained, state-stored show info
     const { title, service, genre, rating, completed } = activeShow || '';
-
 
     // destructure month and year from date
     let month = '';
@@ -196,14 +193,9 @@ function EditShowWatched() {
                         DELETE show
                     </button>
                 </div>
-            </div>
-            
+            </div>        
         </main>
-            
-        
-
     )
-
 }
 
 export default EditShowWatched;

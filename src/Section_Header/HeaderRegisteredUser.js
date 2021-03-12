@@ -52,7 +52,6 @@ function HeaderRegisteredUser() {
             </div>
         </header>
     )
-
 }
 
 export default HeaderRegisteredUser;

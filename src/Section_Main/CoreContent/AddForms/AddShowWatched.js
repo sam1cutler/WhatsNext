@@ -141,9 +141,7 @@ function AddShowWatched() {
                 </Link>
             </div>
         </main>
-
     )
-
 }
 
 export default AddShowWatched;

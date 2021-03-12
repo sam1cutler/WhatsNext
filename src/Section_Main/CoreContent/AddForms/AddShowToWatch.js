@@ -90,11 +90,8 @@ function AddShowToWatch() {
                     </div>
                 </Link>
             </div>
-            
         </main>
-
     )
-
 }
 
 export default AddShowToWatch;

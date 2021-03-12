@@ -31,7 +31,6 @@ function refineShowList(showList) {
 function renderShowList(showList) {
 
     return showList.map( (activeShow, i) => {
-        console.log(activeShow)
         if (activeShow.watched === true) {
             return (
                 <WatchedCard 
@@ -57,11 +56,9 @@ function renderWelcome() {
             </div>
             <div className='add-watched-show-pointer'>
                 ➞
-            </div>
-            
+            </div>  
         </div>
     )
-
 }
 
 function WatchedLog() {
@@ -86,11 +83,8 @@ function WatchedLog() {
             : renderWelcome()
 
     return (
-
         <main className='show-list-container'>
-
             {showListDisplay}
-
             <NavLink 
                 to='/watched-log/add-show'    
             >
@@ -98,11 +92,8 @@ function WatchedLog() {
                     <FaPlus />
                 </div>
             </NavLink>
-
         </main>
-
     )
-
 }
 
 export default WatchedLog;

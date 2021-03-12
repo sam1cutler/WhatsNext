@@ -18,7 +18,6 @@ function SignupPage() {
 
         if (password.value !== passwordRepeat.value) {
             setError('Passwords do not match.')
-            email.value = '';
             password.value = '';
             passwordRepeat.value = '';
         } else {
@@ -34,7 +33,6 @@ function SignupPage() {
                     })
                         .then(res => {
                             TokenService.saveAuthToken(res.authToken)
-                            TokenService.saveUserId(res.user_id)
 
                             email.value = '';
                             display_name.value = '';

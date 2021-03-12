@@ -52,9 +52,8 @@ function EditShowToWatch() {
                     pathname: '/watch-list'
                 })
             })
-            .catch(error => {
-                // EVENTUALLY SHARE W/USER
-                console.log(error)
+            .catch(res => {
+                setError(res.error)
             })
 
     }
@@ -62,13 +61,11 @@ function EditShowToWatch() {
     /*-- ShowID-specific GET request to populate form w/existing show info --*/
     useEffect( () => {
 
-        //const activeUser = TokenService.getUserId();
-
         ShowsApiService.getShowById(showId)
             .then( showResult => {
                 setActiveShow(showResult)
             })
-
+            
     }, [showId] )
 
     const errorMessage = MiscHelpers.generateErrorMessage(error);
@@ -116,16 +113,6 @@ function EditShowToWatch() {
                             <option value='other'>Other</option>
                         </select>
                     </div>
-                    {/*
-                    <div className='edit-show-section'>
-                        <label htmlFor='priority'>Priority:</label><br />
-                        <select name='priority' id='priority'>
-                            <option value='top'>Top</option>
-                            <option value='middle'>Middle</option>
-                            <option value='bottom'>Bottom</option>
-                        </select>
-                    </div>
-                    */}
                     <div className='edit-show-section'>
                         <button type='submit' className='edit-show-button'>Update show info</button>
                     </div>
@@ -148,9 +135,7 @@ function EditShowToWatch() {
                 </div>
             </div>      
         </main>
-
     )
-
 }
 
 export default EditShowToWatch;

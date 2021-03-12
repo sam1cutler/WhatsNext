@@ -60,11 +60,8 @@ function AddFriend() {
                     </div>
                 </Link>
             </div>
-            
         </main>
-
     )
-
 }
 
 export default AddFriend;

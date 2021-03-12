@@ -1,30 +1,32 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import './LandingPage.css';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
+import MiscHelpers from '../../misc-helpers';
 
 function LandingPage() {
 
     const history = useHistory();
+    const [ error, setError ] = useState();
 
     function handleEnterDemoMode() {
-
         AuthApiService.postLogin({
             email: 'hermes@gmail.com',
             password: 'gH4$gH4$'
         })
             .then(res => {
-                TokenService.saveUserId(res.user_id);
                 TokenService.saveAuthToken(res.authToken);
                 history.push({
                     pathname: '/watch-list'
                 })
             })
             .catch(res => {
-                console.log(res.error)
+                setError(res.error)
             })
     }
+
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return (
 
@@ -66,6 +68,7 @@ function LandingPage() {
 
                 <section>
                     <h2>Learn More</h2>
+                    {errorMessage}
                     <div className='next-steps-container'>
                         <button
                             to='/watch-list'
@@ -86,9 +89,7 @@ function LandingPage() {
 
             </div>
         </main>
-
     )
-
 }
 
 export default LandingPage;

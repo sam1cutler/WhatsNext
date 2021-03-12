@@ -2,17 +2,17 @@ import { useState } from 'react';
 import FriendsApiService from '../../../services/friends-api-service';
 import './FriendCard.css';
 import { BsTrash } from 'react-icons/bs';
+import MiscHelpers from '../../../misc-helpers';
 
 function FriendCard(props) {
 
     const [ deletionRequest, setDeletionRequest ] = useState(false);
+    const [ error, setError ] = useState();
     
     const { id, recipient_name } = props.friendInfo || '';
 
     /*-- handler function for confirming friend deletion --*/
     function handleConfirmDeleteFriend(e) {
-
-        console.log('requested delete')
 
         e.preventDefault();
 
@@ -20,11 +20,9 @@ function FriendCard(props) {
             .then( () => {
                 window.location.reload();
             })
-            .catch(error => {
-                // eventually communicate
-                console.log(error)
+            .catch(res => {
+                setError(res.error)
             })
-
     }
 
     /*-- handler functions for opening/closing "Deletion" mini-form --*/
@@ -60,11 +58,11 @@ function FriendCard(props) {
                         Cancel
                     </button>
                 </div>
-                
             </div>
         )
-
     }
+
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     const deletionConfirmation = 
         (deletionRequest)
@@ -87,12 +85,10 @@ function FriendCard(props) {
                     </button>
                 </div>
             </div>
+            {errorMessage}
             {deletionConfirmation}
         </div>
-        
-
     )
-
 }
 
 export default FriendCard;

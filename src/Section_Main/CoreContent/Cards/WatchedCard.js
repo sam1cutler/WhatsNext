@@ -18,12 +18,10 @@ function WatchedCard(props) {
     return (
 
         <div className='watched-show-card'>
-
             <div className='watched-card-content'>
                 <ServiceLogo 
                     service={service}
                 />
-
                 <div className='show-card-content-div'>
                     <div className='show-title-div show-card-main-info-half'>
                         <b>{title}</b>
@@ -33,7 +31,6 @@ function WatchedCard(props) {
                         {genre}
                     </div>
                 </div>
-
                 <div className='show-card-buttons-div'>
                     <div className='watched-date-container'>
                         {finalDate}
@@ -50,7 +47,6 @@ function WatchedCard(props) {
             </div>
         </div>
     )
-
 }
 
 export default WatchedCard;

@@ -3,7 +3,6 @@ import config from '../config';
 const AuthApiService = {
 
     postLogin(credentials) {
-
         return fetch(`${config.API_ENDPOINT}/auth/login`, {
             method: 'POST',
             headers: {
@@ -16,7 +15,6 @@ const AuthApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             )
-
     },
 
     postUser(user) {
@@ -33,6 +31,7 @@ const AuthApiService = {
                     : res.ok
             )
     },
+    
 };
 
 export default AuthApiService;

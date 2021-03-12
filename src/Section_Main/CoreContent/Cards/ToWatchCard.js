@@ -6,11 +6,13 @@ import { AiOutlineCheckSquare } from 'react-icons/ai';
 import { RiEdit2Line } from 'react-icons/ri';
 import { ImCancelCircle } from 'react-icons/im'
 import ServiceLogo from './ServiceLogo';
+import MiscHelpers from '../../../misc-helpers';
 
 function ToWatchCard(props) {
 
-    const [ completionStatus, setCompletionStatus ] = useState(false);
     const history = useHistory();
+    const [ completionStatus, setCompletionStatus ] = useState(false);
+    const [ error, setError ] = useState();
 
     const { id, title, service, genre } = props.cardInfo || '';
 
@@ -40,7 +42,7 @@ function ToWatchCard(props) {
                 })
             })
             .catch(res => {
-                console.log(res.error)
+                setError(res.error)
             })
     }
 
@@ -92,7 +94,6 @@ function ToWatchCard(props) {
                         <div className='finish-show-cancel-button-button'>
                             <ImCancelCircle />
                         </div>
-                        
                     </button>
                 </div>
             </div>
@@ -105,10 +106,11 @@ function ToWatchCard(props) {
             ? renderRatingForm()
             : null
 
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
+
     return (
 
         <div className='to-watch-show-card'>
-
             <div className='to-watch-card-content'>
                 <ServiceLogo 
                     service={service}
@@ -121,7 +123,6 @@ function ToWatchCard(props) {
                         {genre}
                     </div>
                 </div>
-
                 <div className='show-card-buttons-div'>
                     <button
                         type='click'
@@ -140,11 +141,10 @@ function ToWatchCard(props) {
                     </Link>
                 </div>
             </div>
+            {errorMessage}
             {ratingForm}
         </div>
-
     )
-
 }
 
 export default ToWatchCard;

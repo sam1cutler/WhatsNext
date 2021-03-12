@@ -37,7 +37,6 @@ function HeaderFriendPages(props) {
                 </NavLink>
             </div>
         </div>
-
     )
 }
 
