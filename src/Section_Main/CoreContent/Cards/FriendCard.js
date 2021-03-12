@@ -6,7 +6,8 @@ import { BsTrash } from 'react-icons/bs';
 function FriendCard(props) {
 
     const [ deletionRequest, setDeletionRequest ] = useState(false);
-    const { id, recipient_name } = props.friendInfo;
+    
+    const { id, recipient_name } = props.friendInfo || '';
 
     /*-- handler function for confirming friend deletion --*/
     function handleConfirmDeleteFriend(e) {

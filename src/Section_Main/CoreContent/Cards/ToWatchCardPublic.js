@@ -3,7 +3,7 @@ import ServiceLogo from './ServiceLogo';
 
 function ToWatchCardPublic(props) {
 
-    const { title, service, genre } = props.cardInfo;
+    const { title, service, genre } = props.cardInfo || '';
 
     return (
 

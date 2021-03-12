@@ -7,7 +7,7 @@ import { ImCancelCircle } from 'react-icons/im';
 
 function HeaderFriendPages(props) {
 
-    const { id, display_name, connectionId} = props.friend;
+    const { id, display_name, connectionId} = props.friend || '';
 
     return (
         <div className='friend-page-header-container'>

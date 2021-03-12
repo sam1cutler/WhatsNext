@@ -8,7 +8,7 @@ import logoOther from '../../../images/television3.png';
 
 function ServiceLogo(props) {
 
-    const { service } = props;
+    const { service } = props || '';
 
     const logos = {
         'netflix': logoNetflix,

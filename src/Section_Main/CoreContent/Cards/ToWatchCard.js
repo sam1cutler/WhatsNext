@@ -12,7 +12,7 @@ function ToWatchCard(props) {
     const [ completionStatus, setCompletionStatus ] = useState(false);
     const history = useHistory();
 
-    const { id, title, service, genre } = props.cardInfo;
+    const { id, title, service, genre } = props.cardInfo || '';
 
     /*-- handler function for SUBMITTING "Finished" from --*/
     function handleFinishedShowFormSubmission(e) {    

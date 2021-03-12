@@ -31,6 +31,7 @@ function refineShowList(showList) {
 function renderShowList(showList) {
 
     return showList.map( (activeShow, i) => {
+        console.log(activeShow)
         if (activeShow.watched === true) {
             return (
                 <WatchedCard 

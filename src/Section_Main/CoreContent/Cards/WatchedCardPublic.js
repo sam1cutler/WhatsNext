@@ -5,7 +5,8 @@ import ServiceLogo from './ServiceLogo';
 
 function WatchedCardPublic(props) {
 
-    const { title, service, genre, completed, rating } = props.cardInfo;
+    const { title, service, genre, rating } = props.cardInfo || '';
+    const { completed } = props.cardInfo || {completed: "2020-09-01T07:00:00.000Z"};
 
     const interimDate = new Date(completed);
     const finalDate = format(interimDate, 'MMM yyyy');
