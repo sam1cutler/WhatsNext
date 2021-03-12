@@ -11,3 +11,9 @@
 p {
     margin: 3% 0 0 0;
 }
+
+@media all and (min-width: 700px) {
+    .date-component {
+        padding: 2% 2% 0 2%;
+    }
+}

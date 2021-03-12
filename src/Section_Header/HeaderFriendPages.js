@@ -1,7 +1,8 @@
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './HeaderFriendPages.css';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import { AiOutlineCheckSquare } from 'react-icons/ai';
+import { ImCancelCircle } from 'react-icons/im';
 
 
 function HeaderFriendPages(props) {
@@ -11,9 +12,15 @@ function HeaderFriendPages(props) {
     return (
         <div className='friend-page-header-container'>
             <div className='friend-header-upper'>
-                <div className='header-component friend-name-container'>
+                <div className='friend-name-container'>
                     <b><i>{display_name}</i></b>
                 </div>
+                <Link 
+                    to={`/friends`}
+                    className='friend-name-cancel-container'
+                >
+                    <ImCancelCircle />
+                </Link>
             </div>
             <div className='friend-header-lower'>
                 <NavLink

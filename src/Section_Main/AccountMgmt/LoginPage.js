@@ -55,24 +55,26 @@ function LoginPage() {
     return (
 
         <main className='login-container'>
-            <h2>Log in</h2>
-            <form 
-                id='login-form'
-                className='login-form'
-                onSubmit={handleSubmitJwtAuth}
-            >
-                <div className='login-form-section'>
-                    <label htmlFor='email'>Email:</label><br />
-                    <input type="email" name='email' required />
-                </div>
-                <div className='login-form-section'>
-                    <label htmlFor='password'>Password:</label><br />
-                    <input type="password" name='password' required />
-                </div>
-                <div className='login-form-section'>
-                    <button type='submit' className='login-button'>Log in</button>
-                </div>
-            </form>
+            <div className='form-backing'>
+                <h2>Log in</h2>
+                <form 
+                    id='login-form'
+                    className='login-form'
+                    onSubmit={handleSubmitJwtAuth}
+                >
+                    <div className='login-form-section'>
+                        <label htmlFor='email'>Email:</label><br />
+                        <input type="email" name='email' required />
+                    </div>
+                    <div className='login-form-section'>
+                        <label htmlFor='password'>Password:</label><br />
+                        <input type="password" name='password' required />
+                    </div>
+                    <div className='login-form-section'>
+                        <button type='submit' className='login-button'>Log in</button>
+                    </div>
+                </form>
+            </div>    
         </main>
 
     )

@@ -7,10 +7,6 @@
     margin: 2%;
     padding: 2%;
     text-align: center;
-    border: solid 1px black;
-    border-radius: 4px;
-    box-shadow: 0 0 7px grey;
-    background-color: rgb(196, 193, 193);
 }
 
 .edit-show-section {
@@ -40,3 +36,21 @@
     background-color: rgb(223, 179, 179);
 }
 
+@media all and (min-width: 700px) {
+
+    .edit-show-container h2 {
+        margin-bottom: 0;
+    }
+
+    .edit-show-form {
+        margin: 0;
+    }
+
+    .edit-show-section {
+        padding: 1%;
+    }
+
+    .edit-show-section p {
+        margin: 2% 0 0 0;
+    }
+}

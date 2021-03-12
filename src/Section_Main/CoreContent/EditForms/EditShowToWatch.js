@@ -76,71 +76,73 @@ function EditShowToWatch() {
     return (
 
         <main className='edit-show-container'>
-            <h2>Edit info about {title}:</h2>
-            <form 
-                className='edit-show-form'
-                onSubmit={handleEditShowFormSubmission}
-            >
-                <div className='edit-show-section'>
-                    <label htmlFor='title'>Title:</label><br />
-                    <input type='text' name='title' required defaultValue={title}/>
-                </div>
-                <div className='edit-show-section'>
-                    <label htmlFor='service'>Streaming Service:</label><br />
-                    <select name='service' id='service' defaultValue={service} key={service}>
-                        <option value='netflix'>Netflix</option>
-                        <option value='hulu'>Hulu</option>
-                        <option value='hbo'>HBO Max</option>
-                        <option value='amazon'>Amazon Prime</option>
-                        <option value='disney'>Disney+</option>
-                        <option value='apple'>Apple TV</option>
-                        <option value='other'>Other</option>
-                    </select>
-                </div>
-                <div className='edit-show-section'>
-                    <label htmlFor='genre'>Genre:</label><br />
-                    <select name='genre' id='genre' defaultValue={genre} key={genre}>
-                        <option value='Drama'>Drama</option>
-                        <option value='Comedy'>Comedy</option>
-                        <option value='SciFi'>SciFi</option>
-                        <option value='Fantasy'>Fantasy</option>
-                        <option value='Crime'>Crime</option>
-                        <option value='Cooking'>Cooking</option>
-                        <option value='Sports'>Sports</option>
-                        <option value='Documentary'>Documentary</option>
-                        <option value='other'>Other</option>
-                    </select>
-                </div>
-                {/*
-                <div className='edit-show-section'>
-                    <label htmlFor='priority'>Priority:</label><br />
-                    <select name='priority' id='priority'>
-                        <option value='top'>Top</option>
-                        <option value='middle'>Middle</option>
-                        <option value='bottom'>Bottom</option>
-                    </select>
-                </div>
-                */}
-                <div className='edit-show-section'>
-                    <button type='submit' className='edit-show-button'>Update show info</button>
-                </div>
-            </form>
-            <Link
-                to={'/watch-list'}
-            >
-                <div className='simple-return-link'>
-                    Return to Watch List
-                </div>
-            </Link>
-            <div className='edit-show-section'>
-                <button 
-                    type='click' 
-                    className='delete-show-button'
-                    onClick={handleDeleteShow}
+            <div className='form-backing'>
+                <h2>Edit info about {title}:</h2>
+                <form 
+                    className='edit-show-form'
+                    onSubmit={handleEditShowFormSubmission}
                 >
-                    DELETE show
-                </button>
-            </div>
+                    <div className='edit-show-section'>
+                        <label htmlFor='title'>Title:</label><br />
+                        <input type='text' name='title' required defaultValue={title}/>
+                    </div>
+                    <div className='edit-show-section'>
+                        <label htmlFor='service'>Streaming Service:</label><br />
+                        <select name='service' id='service' defaultValue={service} key={service}>
+                            <option value='netflix'>Netflix</option>
+                            <option value='hulu'>Hulu</option>
+                            <option value='hbo'>HBO Max</option>
+                            <option value='amazon'>Amazon Prime</option>
+                            <option value='disney'>Disney+</option>
+                            <option value='apple'>Apple TV</option>
+                            <option value='other'>Other</option>
+                        </select>
+                    </div>
+                    <div className='edit-show-section'>
+                        <label htmlFor='genre'>Genre:</label><br />
+                        <select name='genre' id='genre' defaultValue={genre} key={genre}>
+                            <option value='Drama'>Drama</option>
+                            <option value='Comedy'>Comedy</option>
+                            <option value='SciFi'>SciFi</option>
+                            <option value='Fantasy'>Fantasy</option>
+                            <option value='Crime'>Crime</option>
+                            <option value='Cooking'>Cooking</option>
+                            <option value='Sports'>Sports</option>
+                            <option value='Documentary'>Documentary</option>
+                            <option value='other'>Other</option>
+                        </select>
+                    </div>
+                    {/*
+                    <div className='edit-show-section'>
+                        <label htmlFor='priority'>Priority:</label><br />
+                        <select name='priority' id='priority'>
+                            <option value='top'>Top</option>
+                            <option value='middle'>Middle</option>
+                            <option value='bottom'>Bottom</option>
+                        </select>
+                    </div>
+                    */}
+                    <div className='edit-show-section'>
+                        <button type='submit' className='edit-show-button'>Update show info</button>
+                    </div>
+                </form>
+                <Link
+                    to={'/watch-list'}
+                >
+                    <div className='simple-return-link'>
+                        Return to Watch List
+                    </div>
+                </Link>
+                <div className='edit-show-section'>
+                    <button 
+                        type='click' 
+                        className='delete-show-button'
+                        onClick={handleDeleteShow}
+                    >
+                        DELETE show
+                    </button>
+                </div>
+            </div>      
         </main>
 
     )

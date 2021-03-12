@@ -23,3 +23,33 @@
     font-size: 0.8rem;
     color: rgb(173, 148, 5);
 }
+
+@media all and (min-width: 700px) {
+
+    .watched-show-card {
+        margin: 3% 0;
+    }
+
+    .rating-div {
+        font-size: 1.1rem;
+    }
+
+    .genre-div {
+        font-size: 1.1rem;
+    }
+
+    .watched-date-container {
+        font-size: 1.4rem;
+        margin-right: 5%;
+    }
+
+    .show-card-buttons-div {
+        align-items: center;
+        padding: 0;
+    }
+
+    .show-card-button {
+        margin-right: 15%;
+    }
+
+}

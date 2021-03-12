@@ -44,7 +44,18 @@
 }
 
 .friend-name-container {
+    width: 80%;
     font-size: 1.2rem;
+    margin: 0 0 3px 10px;
+}
+
+.friend-name-cancel-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 10px 3px 0;
+    width: 20%;
+    font-size: 1.3rem;
 }
 
 @media all and (min-width: 700px) {
@@ -70,6 +81,7 @@
         width: 40%;
         align-items: flex-end;
         justify-content: flex-end;
+        padding-right: 7%;
     }
 
     .friend-name-container {
@@ -81,6 +93,16 @@
         height: 60px;
         width: 60px;
         margin: 6% 5%;
+    }
+
+    .friend-name-cancel-container {
+        position: fixed;
+        top: 23%;
+        right: 15.5%;
+    }
+
+    .friend-name-cancel-container:hover {
+        filter: drop-shadow(0 0 8px rgb(63, 63, 63));
     }
     
 }

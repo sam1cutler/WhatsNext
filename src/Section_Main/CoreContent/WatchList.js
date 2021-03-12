@@ -4,21 +4,9 @@ import ToWatchCard from './Cards/ToWatchCard';
 import './WatchList.css';
 import { FaPlus } from 'react-icons/fa';
 import ShowsApiService from '../../services/shows-api-service';
-import TokenService from '../../services/token-service';
+//import tvEmoji from '../../images/television3.png';
 
-/*
-function orderShowList(showList) {
-    showList.sort( function(a, b) {
-        const c = a.priority;
-        const d = b.priority;
-        return c-d
-    })
-}
-*/
 
-// refineShowList is intended to 
-//    a) filter by "to-watch" / "watched"
-//    b) sort by sthg (currently just priority for this page, eventually variable)
 function refineShowList(showList) {
 
     let refinedList = [];
@@ -28,8 +16,6 @@ function refineShowList(showList) {
             refinedList.push(activeShow)
         } 
     })
-
-    //orderShowList(refinedList);
 
     return refinedList;
 }
@@ -46,6 +32,29 @@ function renderShowList(showList) {
     })
 }
 
+function renderWelcome() {
+
+    return (
+        <div className='watch-list-welcome-message first-welcome'>
+            <h2>Welcome to <br /> What's Next!</h2>
+            <p>To get started...</p>
+            {/*
+            <div className='tv-emoji-container'>
+                <img src={tvEmoji} alt='tv-emoji'/>
+            </div>
+            */}
+            <div className='add-show-message'>
+                <p>...add a show to your Watch-List!</p>
+            </div>
+            <div className='add-show-pointer'>
+                ➞
+            </div>
+            
+        </div>
+    )
+
+}
+
 function WatchList() {
     
     // establish showList for component's state
@@ -54,24 +63,24 @@ function WatchList() {
     // define useEffect method responsible for API call
     useEffect( () => {
 
-        const activeUser = TokenService.getUserId();
-
-        ShowsApiService.getShows(activeUser)
+        ShowsApiService.getShows()
             .then( showsResults => {
-                setShowList(showsResults);
+                const filteredResults = refineShowList(showsResults)
+                setShowList(filteredResults);
             })
     }, [] )
+    
 
-    // take the API-drawn, state-stored showList and refine 
-    //    (refine = filter for "to-watch" + order as needed)
-    const refinedShowList = refineShowList(showList);
-
-    const listOfShows = renderShowList(refinedShowList);
+    // Render either showListDisplay or a welcome message
+    const showListDisplay = 
+        (showList.length > 0)
+            ? renderShowList(showList)
+            : renderWelcome()
 
     return (
         <main className='show-list-container'>
 
-            {listOfShows}
+            {showListDisplay}
 
             <NavLink 
                 to='/watch-list/add-show'    

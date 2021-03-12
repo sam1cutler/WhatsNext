@@ -29,3 +29,15 @@
     background-color: rgb(214, 226, 208);
     */
 }
+
+@media all and (min-width: 700px) {
+
+    .watched-show-card-public {
+        margin: 3% 2%;
+    }
+
+    .watched-show-card-content-div-public {
+        padding: 0 3%;
+    }
+
+}

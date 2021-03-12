@@ -58,9 +58,11 @@
 .show-card-buttons-div {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin: 0;
+    padding-top: 4%;
+    padding-right: 3%;
     width: 25%;
     /*
     background-color: rgb(224, 226, 208);
@@ -143,6 +145,31 @@
 
     .show-title-div {
         font-size: 1.4rem;
+    }
+
+    .to-watch-show-card {
+        margin: 3% 0;
+    }
+
+    .show-card-content-div {
+        width: 60%;
+    }
+
+    .show-card-buttons-div {
+        width: 20%;
+    }
+
+    .show-card-button:hover {
+        box-shadow: none;
+        filter: drop-shadow(0 0 8px rgb(63, 63, 63));
+    }
+
+    .finish-show-cancel-button:hover {
+        box-shadow: none;
+    }
+
+    .finish-show-cancel-button-button:hover {
+        filter: drop-shadow(0 0 8px rgb(102, 102, 102));
     }
 
 }

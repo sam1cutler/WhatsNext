@@ -89,7 +89,10 @@ function ToWatchCard(props) {
                         className='finish-show-cancel-button'
                         onClick={e => handleCancelFinish(e)}
                     >
-                        <ImCancelCircle />
+                        <div className='finish-show-cancel-button-button'>
+                            <ImCancelCircle />
+                        </div>
+                        
                     </button>
                 </div>
             </div>
@@ -114,13 +117,14 @@ function ToWatchCard(props) {
                     <div className='show-title-div show-card-main-info-half'>
                         <b>{title}</b>
                     </div>
-                    <div className='show-card-main-info-half'>
+                    <div className='show-card-main-info-half genre-div'>
                         {genre}
                     </div>
                 </div>
 
                 <div className='show-card-buttons-div'>
                     <button
+                        type='click'
                         className='show-card-button'
                         onClick={e => handleFinishingShow(e)}
                     >

@@ -4,13 +4,10 @@ import FriendCard from './Cards/FriendCard';
 import './FriendsList.css';
 import { FaPlus } from 'react-icons/fa';
 import FriendsApiService from '../../services/friends-api-service';
-//import TokenService from '../../services/token-service';
 
 
 
 function renderFriendsList(friendsList) {
-
-    //console.log(friendsList);
 
     return friendsList.map( (activeFriend, i) => {
         return (
@@ -28,6 +25,29 @@ function renderFriendsList(friendsList) {
     
 }
 
+function renderWelcome() {
+
+    return (
+        <div className='watch-list-welcome-message'>
+            <h2>You don't have any friend connections yet!</h2>
+            
+            {/*
+            <div className='tv-emoji-container'>
+                <img src={tvEmoji} alt='tv-emoji'/>
+            </div>
+            */}
+            <div className='add-friend-message'>
+                <p>Add a friend here.</p>
+            </div>
+            <div className='add-show-pointer'>
+                ➞
+            </div>
+            
+        </div>
+    )
+
+}
+
 function FriendsList() {
 
     const [ friendsList, setFriendsList ] = useState( [] );
@@ -39,13 +59,17 @@ function FriendsList() {
             })
     }, [] )
 
-    const listOfFriends = renderFriendsList(friendsList);
+    // Render either showListDisplay or a welcome message
+    const friendsListDisplay = 
+        (friendsList.length > 0)
+            ? renderFriendsList(friendsList)
+            : renderWelcome()
 
     return(
 
         <main className='friends-list-container'>
             
-            {listOfFriends}
+            {friendsListDisplay}
 
             <Link 
                 to='/friends/add-friend'    

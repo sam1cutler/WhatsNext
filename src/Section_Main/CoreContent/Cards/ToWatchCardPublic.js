@@ -16,7 +16,7 @@ function ToWatchCardPublic(props) {
                 <div className='show-title-div show-card-main-info-half'>
                     <b>{title}</b>
                 </div>
-                <div className='show-card-main-info-half'>
+                <div className='show-card-main-info-half genre-div'>
                     {genre}
                 </div>
             </div>

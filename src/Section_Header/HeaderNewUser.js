@@ -40,20 +40,20 @@ function HeaderNewUser() {
                     to='/signup'
                     className='nav-button'
                 >
-                    Sign Up
+                    <b>Sign Up</b>
                 </NavLink>
                 <NavLink
                     to='/login'
                     className='nav-button'
                 >
-                    Login
+                    <b>Login</b>
                 </NavLink>
                 <div
                     to='/watch-list'
                     className='nav-button'
                     onClick={handleEnterDemoMode}
                 >
-                    Demo
+                    <b>Demo</b>
                 </div>
             </div>
         </header>

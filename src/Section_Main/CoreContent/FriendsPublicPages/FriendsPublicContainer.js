@@ -8,29 +8,28 @@ import PublicWatchedLog from './PublicWatchedLog';
 
 import FriendsApiService from '../../../services/friends-api-service';
 
-
-function renderCoreFriendContent() {
-
-    return (
-        <div className='friends-content-container'>
-            <Route 
-                path='/friends/:connectionId/:friendId/watch-list'
-                exact
-                component={PublicWatchList}
-            />
-            <Route 
-                path='/friends/:connectionId/:friendId/watched-log'
-                exact
-                component={PublicWatchedLog}
-            />
-        </div>
-    )
-}
-
 function FriendsPublicContainer() {
 
     const { friendId, connectionId } = useParams();
     const [ friendInfo, setFriendInfo ] = useState( {} );
+
+    function renderCoreFriendContent() {
+
+        return (
+            <div className='friends-content-container'>
+                <Route 
+                    path='/friends/:connectionId/:friendId/watch-list'
+                    exact
+                    component={PublicWatchList}
+                />
+                <Route 
+                    path='/friends/:connectionId/:friendId/watched-log'
+                    exact
+                    component={PublicWatchedLog}
+                />
+            </div>
+        )
+    }
     
     // API call to /users endpoint to get friend info for header
     useEffect( () => {

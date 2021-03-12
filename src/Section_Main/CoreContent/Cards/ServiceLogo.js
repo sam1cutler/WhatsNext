@@ -4,7 +4,7 @@ import logoDisney from '../../../images/disney.svg';
 import logoHbo from '../../../images/hboMax.png';
 import logoPrime from '../../../images/prime2.svg';
 import logoApple from '../../../images/appleTv.svg';
-import logoOther from '../../../images/television2.png';
+import logoOther from '../../../images/television3.png';
 
 function ServiceLogo(props) {
 

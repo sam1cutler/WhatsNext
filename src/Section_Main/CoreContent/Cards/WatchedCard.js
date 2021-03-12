@@ -28,7 +28,7 @@ function WatchedCard(props) {
                         <b>{title}</b>
                     </div>
                     {starRating}
-                    <div className='show-card-main-info-half'>
+                    <div className='show-card-main-info-half genre-div'>
                         {genre}
                     </div>
                 </div>

@@ -1,3 +1,46 @@
+.watch-list-welcome-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10%;
+    text-align: center;
+    
+}
+
+.watch-list-welcome-message h2 {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+.first-welcome h2 {
+    font-size: 2rem;
+}
+
+.watch-list-welcome-message p {
+    font-size: 1.5rem;
+}
+
+.add-show-message {
+    position: fixed;
+    bottom: 3%;
+    left: 5%;
+    width: 60%;
+}
+
+.add-show-pointer {
+    position: fixed;
+    bottom: 2.5%;
+    left: 62%;
+    font-size: 3rem;
+}
+
+.tv-emoji-container {
+    width: 100px;
+}
+
+.tv-emoji {
+    width: 100px;
+}
+
 .add-button {
     position: fixed;
     bottom: 3%;
@@ -28,4 +71,20 @@
         right: 17%;  
     }
 
+    .add-button:hover {
+        box-shadow: 0 0 12px black;
+    }
+
+    .add-show-message {
+        width: auto;
+        left: auto;
+        right: 32%;
+        bottom: 5%;
+    }
+
+    .add-show-pointer {
+        bottom: 5%;
+        left: auto;
+        right: 25%;
+    }
 }

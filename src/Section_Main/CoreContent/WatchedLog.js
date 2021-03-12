@@ -4,7 +4,6 @@ import WatchedCard from './Cards/WatchedCard';
 import './WatchedLog.css';
 import { FaPlus } from 'react-icons/fa';
 import ShowsApiService from '../../services/shows-api-service';
-import TokenService from '../../services/token-service';
 
 function orderShowList(showList) {
     showList.sort( function(a, b) {
@@ -46,6 +45,29 @@ function renderShowList(showList) {
 
 }
 
+function renderWelcome() {
+
+    return (
+        <div className='watch-list-welcome-message'>
+            <h2>No watched shows?</h2>
+            <p>Either finish a show on your Watch List...</p>
+            {/*
+            <div className='tv-emoji-container'>
+                <img src={tvEmoji} alt='tv-emoji'/>
+            </div>
+            */}
+            <div className='add-watched-show-message'>
+                <p>...or add a show directly to your Watched Log.</p>
+            </div>
+            <div className='add-watched-show-pointer'>
+                ➞
+            </div>
+            
+        </div>
+    )
+
+}
+
 function WatchedLog() {
 
     // establish showList for component's state
@@ -54,25 +76,24 @@ function WatchedLog() {
     // define useEffect method responsible for API call
     useEffect( () => {
 
-        const activeUser = TokenService.getUserId();
-
-        ShowsApiService.getShows(activeUser)
+        ShowsApiService.getShows()
             .then( showsResults => {
-                setShowList(showsResults);
+                const filteredResults = refineShowList(showsResults)
+                setShowList(filteredResults);
             })
     }, [] )
 
-    // take the API-drawn, state-stored showList and refine 
-    //    (refine = filter for "to-watch" + order as needed)
-    const refinedShowList = refineShowList(showList);
-
-    const listOfShows = renderShowList(refinedShowList);
+    // Render either showListDisplay or a welcome message
+    const showListDisplay = 
+        (showList.length > 0)
+            ? renderShowList(showList)
+            : renderWelcome()
 
     return (
 
         <main className='show-list-container'>
 
-            {listOfShows}
+            {showListDisplay}
 
             <NavLink 
                 to='/watched-log/add-show'    

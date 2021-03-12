@@ -1,16 +1,96 @@
 .friend-card {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     margin: 5% 2%; 
     padding: 2%;
     border: solid 1px black;
     border-radius: 3px;
-    background-color: rgb(179, 212, 212);
+    background-color: rgba(192, 221, 221, 0.8);
     box-shadow: 0 0 6px grey;
 }
 
-.friend-card-element {
-    margin: 0 20px;
+.friend-card-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.friend-card-name {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 80%;
+    margin: 0 30px;
+}
+
+.friend-card-name p {
+    margin: 3px;
+}
+
+.friend-card-delete {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 20%;
+    margin-right: 20px;
+}
+
+.friend-card-delete-button {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    border: none;
+    background-color: rgb(255, 255, 255, 0);
+}
+
+.delete-friend-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 3%;
+}
+
+.delete-friend-confirmation-ques {
+    width: 100%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.delete-friend-confirmation-ques p {
+    margin: 0;
+}
+
+.delete-friend-confirmation-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 2%;
+}
+
+.delete-friend-confirm-button {
+    height: 2rem;
+    font-size: 1.1rem;
+}
+
+@media all and (min-width: 700px) {
+
+    .friend-card {
+        border-radius: 6px;
+    }
+    
+    .friend-card:hover {
+        box-shadow: 0 0 12px rgb(63, 63, 63);
+    }
+
+    .friend-card-delete-button:hover {
+        box-shadow: none;
+        filter: drop-shadow(0 0 8px rgb(63, 63, 63));
+    }
+
 }

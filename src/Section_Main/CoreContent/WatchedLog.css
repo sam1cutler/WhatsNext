@@ -1,0 +1,30 @@
+.add-watched-show-message {
+    position: fixed;
+    bottom: 3%;
+    left: 5%;
+    width: 55%;
+}
+
+.add-watched-show-pointer {
+    position: fixed;
+    bottom: 2.5%;
+    left: 60%;
+    font-size: 3rem;
+}
+
+@media all and (min-width: 700px) {
+
+    .add-watched-show-message {
+        width: auto;
+        left: auto;
+        right: 31%;
+        bottom: 4%;
+    }
+
+    .add-watched-show-pointer {
+        bottom: 5%;
+        left: auto;
+        right: 25%;
+    }
+
+}

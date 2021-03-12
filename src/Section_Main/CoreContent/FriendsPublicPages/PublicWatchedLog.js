@@ -39,28 +39,37 @@ function renderShowList(showList) {
     })
 }
 
-function PublicWatchedLog() {
+function renderNoShows() {
+    return (
+        <div className='watch-list-welcome-message'>
+            <h2>No shows in this friend's watched log!</h2>
+        </div>
+    )
+}
+
+function PublicWatchedLog(props) {
 
     const { friendId } = useParams();
     const [ showsList, setShowsList ] = useState( [] );
 
     // API call to /shows endpoint to get friend's show info
     useEffect( () => {
-        ShowsApiService.getShows(friendId)
+        ShowsApiService.getShowsPublic(friendId)
             .then( friendShowsList => {
-                setShowsList(friendShowsList);
+                const filteredResults = refineShowList(friendShowsList)
+                setShowsList(filteredResults);
             })
     }, [friendId] )
 
-    // take the API-drawn, state-stored showList and refine 
-    //    (refine = filter for "to-watch" + order as needed)
-    const refinedShowList = refineShowList(showsList);
-
-    const listOfShows = renderShowList(refinedShowList);
+    // Render either showListDisplay or a welcome message
+    const showListDisplay = 
+        (showsList.length > 0)
+            ? renderShowList(showsList)
+            : renderNoShows()
 
     return (
         <div>
-            {listOfShows}
+            {showListDisplay}
         </div>
     )
 
