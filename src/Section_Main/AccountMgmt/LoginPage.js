@@ -1,19 +1,20 @@
 
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LoginPage.css';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
-//import config from '../../config';
+import MiscHelpers from '../../misc-helpers';
 
 
 function LoginPage() {
 
     const history = useHistory();
+    const [ error, setError ] = useState();
 
     function handleSubmitJwtAuth(e) {
 
         e.preventDefault();
-        console.log('user wants to log in!')
     
         // de-structure email/pw from form
         const { email, password } = e.target;
@@ -45,18 +46,17 @@ function LoginPage() {
                 email.value = '';
                 password.value = '';
     
-                // IMPLEMENT STATEFUL ERROR MESSAGE EVENTUALLY
-                console.log(res.error)
+                setError(res.error)
             })
     }
 
-    
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return (
-
         <main className='login-container'>
             <div className='form-backing'>
                 <h2>Log in</h2>
+                {errorMessage}
                 <form 
                     id='login-form'
                     className='login-form'
@@ -76,9 +76,7 @@ function LoginPage() {
                 </form>
             </div>    
         </main>
-
     )
-
 }
 
 export default LoginPage;

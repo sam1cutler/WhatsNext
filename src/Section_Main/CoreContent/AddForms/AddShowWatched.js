@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import './AddShowWatched.css';
 import ShowsApiService from '../../../services/shows-api-service';
+import MiscHelpers from '../../../misc-helpers';
 
 function AddShowWatched() {
 
     const history = useHistory();
+    const [ error, setError ] = useState();
 
     function handleNewShowFormSubmission(e) {
         
@@ -27,7 +30,6 @@ function AddShowWatched() {
             watched: true,
         };
 
-        
         // Use ShowApiService to make POST request
         ShowsApiService.addNewShow(newShowInfo)
             .then( () => {
@@ -36,16 +38,18 @@ function AddShowWatched() {
                 })
             })
             .catch(res => {
-                console.log(res.error)
-            })
-            
+                setError(res.error)
+            })      
     }
+
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return (
 
         <main className='add-show-container'>
             <div className='form-backing'>
                 <h2>Add a show to your Log of Watched Shows</h2>
+                {errorMessage}
                 <form 
                     className='add-show-form'
                     onSubmit={handleNewShowFormSubmission}
@@ -117,11 +121,11 @@ function AddShowWatched() {
                     <div className='add-show-section'>
                         <label htmlFor='rating'>Rating:</label><br />
                         <select name='rating' id='rating'>
-                            <option value='1'>1⭐️</option>
-                            <option value='2'>2⭐️</option>
-                            <option value='3'>3⭐️</option>
-                            <option value='4'>4⭐️</option>
                             <option value='5'>5⭐️</option>
+                            <option value='4'>4⭐️</option>
+                            <option value='3'>3⭐️</option>
+                            <option value='2'>2⭐️</option>
+                            <option value='1'>1⭐️</option>
                         </select>
                     </div>
                     <div className='add-show-section'>

@@ -35,15 +35,10 @@ function renderShowList(showList) {
 function renderWelcome() {
 
     return (
-        <div className='watch-list-welcome-message first-welcome'>
+        <div className='watch-list-welcome-message first-welcome form-backing'>
             <h2>Welcome to <br /> What's Next!</h2>
             <p>To get started...</p>
-            {/*
-            <div className='tv-emoji-container'>
-                <img src={tvEmoji} alt='tv-emoji'/>
-            </div>
-            */}
-            <div className='add-show-message'>
+            <div className='add-show-message form-backing'>
                 <p>...add a show to your Watch-List!</p>
             </div>
             <div className='add-show-pointer'>
@@ -56,6 +51,8 @@ function renderWelcome() {
 }
 
 function WatchList() {
+
+    
     
     // establish showList for component's state
     const [ showList, setShowList ] = useState( [] );

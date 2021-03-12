@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useHistory, useParams, Link } from 'react-router-dom';
-//import { format } from 'date-fns';
 import './EditShowWatched.css';
 import ShowsApiService from '../../../services/shows-api-service';
-//import TokenService from '../../../services/token-service';
+import MiscHelpers from '../../../misc-helpers';
 
 function EditShowWatched() {
 
     /*-- declare necessary hook features --*/
     const [ activeShow, setActiveShow ] = useState( [] );
+    const [ error, setError ] = useState();
     const history = useHistory();
     const { showId } = useParams();
 
@@ -45,7 +45,7 @@ function EditShowWatched() {
                 })
             })
             .catch(res => {
-                console.log(res.error)
+                setError(res.error)
             })
     }
 
@@ -59,9 +59,8 @@ function EditShowWatched() {
                     pathname: '/watched-log'
                 })
             })
-            .catch(error => {
-                // EVENTUALLY SHARE W/USER
-                console.log(error)
+            .catch(res => {
+                setError(res.error)
             })
 
     }
@@ -91,11 +90,14 @@ function EditShowWatched() {
         month = completed.slice(5,7);
     }
 
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
+
     return (
 
         <main className='edit-show-container'>
             <div className='form-backing'>
                 <h2>Edit info about {title}:</h2>
+                {errorMessage}
                 <form 
                     className='edit-show-form'
                     onSubmit={handleEditShowFormSubmission}

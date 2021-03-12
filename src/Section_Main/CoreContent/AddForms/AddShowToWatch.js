@@ -1,10 +1,13 @@
+import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import './AddShowToWatch.css';
 import ShowsApiService from '../../../services/shows-api-service';
+import MiscHelpers from '../../../misc-helpers';
 
 function AddShowToWatch() {
 
     const history = useHistory();
+    const [ error, setError ] = useState();
 
     function handleNewShowFormSubmission(e) {
         
@@ -28,16 +31,18 @@ function AddShowToWatch() {
                 })
             })
             .catch(res => {
-                console.log(res.error)
+                setError(res.error)
             })
-
     }
+
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return (
 
         <main className='add-show-container'>
             <div className='form-backing'>
                 <h2>Add a show to your Watch List</h2>
+                {errorMessage}
                 <form 
                     className='add-show-form'
                     onSubmit={handleNewShowFormSubmission}
@@ -72,16 +77,7 @@ function AddShowToWatch() {
                             <option value='other'>Other</option>
                         </select>
                     </div>
-                    {/*
-                    <div className='add-show-section'>
-                        <label htmlFor='priority'>Priority:</label><br />
-                        <select name='priority' id='priority'>
-                            <option value='top'>Top</option>
-                            <option value='middle'>Middle</option>
-                            <option value='bottom'>Bottom</option>
-                        </select>
-                    </div>
-                    */}
+                    
                     <div className='add-show-section'>
                         <button type='submit' className='add-show-button'>Add show</button>
                     </div>

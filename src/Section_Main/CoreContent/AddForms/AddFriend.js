@@ -1,10 +1,14 @@
 import { Link, useHistory } from 'react-router-dom';
+import { useState } from 'react';
 import './AddFriend.css';
 import FriendsApiService from '../../../services/friends-api-service';
+import MiscHelpers from '../../../misc-helpers';
+
 
 function AddFriend() {
 
     const history = useHistory();
+    const [ error, setError ] = useState();
 
     function handleAddFriend(e) {
 
@@ -23,16 +27,18 @@ function AddFriend() {
                 })
             })
             .catch(res => {
-                // eventually communicate
-                console.log(res.error)
+                setError(res.error)
             })
     }
+
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return(
 
         <main className='add-friend-container'>
             <div className='form-backing'>
                 <h2>Add a friend</h2>
+                {errorMessage}
                 <p>Search by their email:</p>
                 <form
                     className='add-friend-form'

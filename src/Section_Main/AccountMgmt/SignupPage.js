@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './SignupPage.css';
 import AuthApiService from '../../services/auth-api-service';
 import TokenService from '../../services/token-service';
+import MiscHelpers from '../../misc-helpers';
 
 function SignupPage() {
 
@@ -55,17 +56,7 @@ function SignupPage() {
 
     }
 
-    function generateErrorMessage() {
-        if (error) {
-            return (
-                <div className='error-message'>
-                    {error}
-                </div>
-            )
-        }
-    }
-
-    const errorMessage = generateErrorMessage();
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
 
     return (
 

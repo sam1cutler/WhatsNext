@@ -20,10 +20,8 @@ import AddShowWatched from './Section_Main/CoreContent/AddForms/AddShowWatched';
 import EditShowWatched from './Section_Main/CoreContent/EditForms/EditShowWatched';
 
 import FriendsList from './Section_Main/CoreContent/FriendsList';
-import FriendPage from './Section_Main/CoreContent/EditForms/FriendPage';
 import AddFriend from './Section_Main/CoreContent/AddForms/AddFriend';
 import FriendsPublicContainer from './Section_Main/CoreContent/FriendsPublicPages/FriendsPublicContainer';
-
 
 
 /* -- Fxns to render header and main screen sections -- */
@@ -110,11 +108,6 @@ function renderMain() {
         path='/friends'
         exact
         component={FriendsList}
-      />
-      <Route 
-        path='/friends/:connectionId/:friendId'
-        exact
-        component={FriendPage}
       />
       <Route 
         path='/friends/add-friend'

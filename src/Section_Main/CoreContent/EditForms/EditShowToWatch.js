@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { useHistory, useParams, Link } from 'react-router-dom';
 import './EditShowToWatch.css';
 import ShowsApiService from '../../../services/shows-api-service';
-//import TokenService from '../../../services/token-service';
+import MiscHelpers from '../../../misc-helpers';
 
 function EditShowToWatch() {
 
     /*-- declare necessary hook features --*/
     const [ activeShow, setActiveShow ] = useState( {} );
+    const [ error, setError ] = useState();
     const history = useHistory();
     const { showId } = useParams();
 
@@ -37,7 +38,7 @@ function EditShowToWatch() {
                 })
             })
             .catch(res => {
-                console.log(res.error)
+                setError(res.error)
             })
     }
 
@@ -70,6 +71,8 @@ function EditShowToWatch() {
 
     }, [showId] )
 
+    const errorMessage = MiscHelpers.generateErrorMessage(error);
+    
     // destructure relevant values from API-obtained, state-stored show info
     const { title, service, genre } = activeShow || '';
 
@@ -78,6 +81,7 @@ function EditShowToWatch() {
         <main className='edit-show-container'>
             <div className='form-backing'>
                 <h2>Edit info about {title}:</h2>
+                {errorMessage}
                 <form 
                     className='edit-show-form'
                     onSubmit={handleEditShowFormSubmission}

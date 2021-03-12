@@ -28,15 +28,9 @@ function renderFriendsList(friendsList) {
 function renderWelcome() {
 
     return (
-        <div className='watch-list-welcome-message'>
+        <div className='watch-list-welcome-message form-backing'>
             <h2>You don't have any friend connections yet!</h2>
-            
-            {/*
-            <div className='tv-emoji-container'>
-                <img src={tvEmoji} alt='tv-emoji'/>
-            </div>
-            */}
-            <div className='add-friend-message'>
+            <div className='add-friend-message form-backing'>
                 <p>Add a friend here.</p>
             </div>
             <div className='add-show-pointer'>

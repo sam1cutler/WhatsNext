@@ -1,8 +1,9 @@
 .add-watched-show-message {
+    padding: 1% 3%;
     position: fixed;
     bottom: 3%;
     left: 5%;
-    width: 55%;
+    width: 45%;
 }
 
 .add-watched-show-pointer {
@@ -17,8 +18,9 @@
     .add-watched-show-message {
         width: auto;
         left: auto;
-        right: 31%;
+        right: 22%;
         bottom: 4%;
+        width: 40%;
     }
 
     .add-watched-show-pointer {

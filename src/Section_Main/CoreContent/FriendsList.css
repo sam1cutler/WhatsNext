@@ -1,9 +1,11 @@
 .add-friend-message {
     position: fixed;
-    bottom: 3%;
+    bottom: 2%;
     left: 5%;
-    width: 60%;
+    width: 50%;
+    padding: 2%;
 }
+
 
 @media all and (min-width: 700px) {
 
@@ -11,7 +13,7 @@
         width: auto;
         bottom: 6%;
         left: auto;
-        right: 32%;
+        right: 22%;
     }
 
 }

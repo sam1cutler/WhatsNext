@@ -48,15 +48,10 @@ function renderShowList(showList) {
 function renderWelcome() {
 
     return (
-        <div className='watch-list-welcome-message'>
+        <div className='watch-list-welcome-message form-backing'>
             <h2>No watched shows?</h2>
             <p>Either finish a show on your Watch List...</p>
-            {/*
-            <div className='tv-emoji-container'>
-                <img src={tvEmoji} alt='tv-emoji'/>
-            </div>
-            */}
-            <div className='add-watched-show-message'>
+            <div className='add-watched-show-message form-backing'>
                 <p>...or add a show directly to your Watched Log.</p>
             </div>
             <div className='add-watched-show-pointer'>
